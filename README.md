@@ -1,2 +1,1 @@
-# portfolio
-Created with CodeSandbox
+Simple Portfolio single-page site, built with React, using styled-components.
