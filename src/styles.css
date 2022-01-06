@@ -5,5 +5,7 @@
 }
 
 .App {
+  position: sticky;
   font-family: sans-serif;
+  z-index: -99;
 }
