@@ -1,10 +1,16 @@
 import "./styles.css";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contacts from "./pages/Contacts";
 
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello portfolio</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <Home />
+      <About />
+      <Projects />
+      <Contacts />
     </div>
   );
 }
