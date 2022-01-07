@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
+  position: sticky;
   height: 100vh;
   width: 100%;
   background-color: lightsalmon;

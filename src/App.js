@@ -12,15 +12,30 @@ export default function App() {
     useRef(),
     useRef()
   ];
-  // const goTo = () => {
-  //   myref.current.scrollIntoView();
-  // };
+
+  const goHome = () => {
+    homeref.current.scrollIntoView();
+  };
+  const goAbout = () => {
+    aboutref.current.scrollIntoView();
+  };
+  const goProjects = () => {
+    projectsref.current.scrollIntoView();
+  };
+  const goContacts = () => {
+    contactsref.current.scrollIntoView();
+  };
+
   return (
     <div>
-      <Home myref={homeref} />
-      <About myref={aboutref} />
-      <Projects myref={projectsref} />
-      <Contacts myref={contactsref} />
+      <div ref={homeref} />
+      <Home goProjects={goProjects} goContacts={goContacts} />
+      <div ref={aboutref} />
+      <About />
+      <div ref={projectsref} />
+      <Projects projectsref={projectsref} />
+      <div ref={contactsref} />
+      <Contacts contactsref={contactsref} />
     </div>
   );
 }

@@ -43,7 +43,6 @@ const ButtonsWrapper = styled.div`
 `;
 
 const Button = styled.button`
-  position: absolute;
   background-color: lightgreen;
   height: 100px;
   width: 200px;
@@ -55,11 +54,12 @@ const Button = styled.button`
   }
 `;
 
-const Home = ({ goTo }) => {
+const Home = ({ goProjects, goContacts }) => {
   return (
     <>
       <Wrapper>
-        <Button onClick={goTo}>Press me please</Button>
+        <Button onClick={goProjects}>Press me please</Button>
+        <Button onClick={goContacts}>Press me please</Button>
         <LogoWrapper />
         <PhotoWrapper />
         <ButtonsWrapper />
