@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import { Title } from "../styles/Common";
+import me from "../assets/me.png";
+import react from "../assets/react.png";
+import Button from "@material-ui/core/Button";
+import SendIcon from "@mui/icons-material/Send";
 
 const Wrapper = styled.div`
   position: sticky;
@@ -11,58 +16,104 @@ const Wrapper = styled.div`
 
 const LogoWrapper = styled.div`
   position: absolute;
-  top: 10vh;
+  top: 13vh;
   margin-left: 50%;
   transform: translate(-50%);
-  width: 50vw;
-  height: 100px;
-  background-color: lightcoral;
-  &:hover {
-    cursor: pointer;
-  }
+  text-align: center;
+  height: 140px;
+  width: 100%;
+`;
+
+const TitleHome = styled(Title)`
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 12vw;
+`;
+
+const Subtitle = styled.p`
+  font-size: 6vw;
+  font-style: italic;
+  color: white;
+`;
+
+const ReactImg = styled.img`
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  object-fit: contain;
+  height: 150%;
 `;
 
 const PhotoWrapper = styled.div`
   position: absolute;
-  top: 40vh;
+  bottom: 30vh;
   margin-left: 50%;
   transform: translate(-50%);
-  width: 50vw;
-  height: 100px;
-  background-color: lightblue;
+  width: 150px;
+  height: 150px;
+  &:hover {
+    cursor: pointer;
+  }
+  z-index: 99;
+`;
+
+const Square = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+`;
+
+const Photo = styled.img`
+  position: absolute;
+  bottom: 0;
+  object-fit: contain;
+  width: 100%;
 `;
 
 const ButtonsWrapper = styled.div`
   position: absolute;
-  top: 70vh;
+  bottom: 10vh;
   margin-left: 50%;
   transform: translate(-50%);
-  width: 70vw;
-  height: 100px;
-  background-color: lightblue;
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
 `;
 
-const Button = styled.button`
-  background-color: lightgreen;
-  height: 100px;
-  width: 200px;
+const CVButton = styled(Button)`
+  width: 100px;
   &:hover {
     cursor: pointer;
   }
-  &:active {
-    transform: translate(10px 10px);
-  }
+  z-index: 50;
 `;
 
-const Home = ({ goProjects, goContacts }) => {
+const Home = () => {
   return (
     <>
       <Wrapper>
-        <Button onClick={goProjects}>Press me please</Button>
-        <Button onClick={goContacts}>Press me please</Button>
-        <LogoWrapper />
-        <PhotoWrapper />
-        <ButtonsWrapper />
+        <LogoWrapper>
+          <TitleHome>Viktor Hulei</TitleHome>
+          <Subtitle>Front-End Developer</Subtitle>
+          <ReactImg src={react} alt="react_image" />
+        </LogoWrapper>
+        <PhotoWrapper>
+          <Square />
+          <Photo src={me} alt="me" />
+        </PhotoWrapper>
+        <ButtonsWrapper>
+          <CVButton variant="contained">CV</CVButton>
+          <Button
+            variant="contained"
+            endIcon={<SendIcon />}
+            style={{ width: "100px" }}
+          >
+            Email
+          </Button>
+        </ButtonsWrapper>
       </Wrapper>
     </>
   );

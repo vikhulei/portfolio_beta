@@ -27,15 +27,15 @@ export default function App() {
   };
 
   return (
-    <div>
+    <div className="App">
       <div ref={homeref} />
-      <Home goProjects={goProjects} goContacts={goContacts} />
+      <Home />
       <div ref={aboutref} />
       <About />
       <div ref={projectsref} />
-      <Projects projectsref={projectsref} />
+      <Projects />
       <div ref={contactsref} />
-      <Contacts contactsref={contactsref} />
+      <Contacts />
     </div>
   );
 }
