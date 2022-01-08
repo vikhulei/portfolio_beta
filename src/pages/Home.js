@@ -3,7 +3,6 @@ import { Title } from "../styles/Common";
 import me from "../assets/me.png";
 import react from "../assets/react.png";
 import Button from "@material-ui/core/Button";
-import SendIcon from "@mui/icons-material/Send";
 
 const Wrapper = styled.div`
   position: sticky;
@@ -55,7 +54,6 @@ const PhotoWrapper = styled.div`
   &:hover {
     cursor: pointer;
   }
-  z-index: 99;
 `;
 
 const Square = styled.div`
@@ -84,11 +82,11 @@ const ButtonsWrapper = styled.div`
 `;
 
 const CVButton = styled(Button)`
+  position: absolute;
   width: 100px;
   &:hover {
     cursor: pointer;
   }
-  z-index: 50;
 `;
 
 const Home = () => {
@@ -106,11 +104,7 @@ const Home = () => {
         </PhotoWrapper>
         <ButtonsWrapper>
           <CVButton variant="contained">CV</CVButton>
-          <Button
-            variant="contained"
-            endIcon={<SendIcon />}
-            style={{ width: "100px" }}
-          >
+          <Button variant="contained" style={{ width: "100px" }}>
             Email
           </Button>
         </ButtonsWrapper>
