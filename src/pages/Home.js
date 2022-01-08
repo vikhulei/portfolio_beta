@@ -2,7 +2,9 @@ import styled from "styled-components";
 import { Title } from "../styles/Common";
 import me from "../assets/me.png";
 import react from "../assets/react.png";
-import Button from "@material-ui/core/Button";
+import { Button, StylesProvider } from "@material-ui/core";
+import SaveIcon from "@material-ui/icons/Save";
+import SendIcon from "@material-ui/icons/Send";
 
 const Wrapper = styled.div`
   position: sticky;
@@ -51,9 +53,6 @@ const PhotoWrapper = styled.div`
   transform: translate(-50%);
   width: 150px;
   height: 150px;
-  &:hover {
-    cursor: pointer;
-  }
 `;
 
 const Square = styled.div`
@@ -76,17 +75,13 @@ const ButtonsWrapper = styled.div`
   bottom: 10vh;
   margin-left: 50%;
   transform: translate(-50%);
-  width: 60vw;
+  width: 70vw;
   display: flex;
   justify-content: space-between;
 `;
 
-const CVButton = styled(Button)`
-  position: absolute;
-  width: 100px;
-  &:hover {
-    cursor: pointer;
-  }
+const HomeButton = styled(Button)`
+  width: 90px;
 `;
 
 const Home = () => {
@@ -102,12 +97,24 @@ const Home = () => {
           <Square />
           <Photo src={me} alt="me" />
         </PhotoWrapper>
-        <ButtonsWrapper>
-          <CVButton variant="contained">CV</CVButton>
-          <Button variant="contained" style={{ width: "100px" }}>
-            Email
-          </Button>
-        </ButtonsWrapper>
+        <StylesProvider injectFirst>
+          <ButtonsWrapper>
+            <HomeButton
+              variant="contained"
+              color="primary"
+              endIcon={<SaveIcon />}
+            >
+              CV
+            </HomeButton>
+            <HomeButton
+              variant="contained"
+              color="secondary"
+              endIcon={<SendIcon />}
+            >
+              Email
+            </HomeButton>
+          </ButtonsWrapper>
+        </StylesProvider>
       </Wrapper>
     </>
   );
