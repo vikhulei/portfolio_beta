@@ -101,15 +101,15 @@ const Home = () => {
           <ButtonsWrapper>
             <HomeButton
               variant="contained"
-              color="primary"
-              endIcon={<SaveIcon />}
+              color="secondary"
+              // endIcon={<SaveIcon />}
             >
               CV
             </HomeButton>
             <HomeButton
               variant="contained"
-              color="secondary"
-              endIcon={<SendIcon />}
+              color="primary"
+              // endIcon={<SendIcon />}
             >
               Email
             </HomeButton>
