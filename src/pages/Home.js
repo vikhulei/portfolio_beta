@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Title } from "../styles/Common";
-// import me from "../assets/me.png";
-// import react from "../assets/react.png";
+import me from "../assets/me.png";
+import react from "../assets/react.png";
 import { Button, StylesProvider } from "@material-ui/core";
-import SaveIcon from "@material-ui/icons/Save";
+import FileIcon from "@material-ui/icons/FileCopy";
 import SendIcon from "@material-ui/icons/Send";
 
 const Wrapper = styled.div`
@@ -48,7 +48,7 @@ const ReactImg = styled.img`
 
 const PhotoWrapper = styled.div`
   position: absolute;
-  bottom: 35vh;
+  bottom: 40vh;
   margin-left: 50%;
   transform: translate(-50%);
   width: 150px;
@@ -72,7 +72,7 @@ const Photo = styled.img`
 
 const ButtonsWrapper = styled.div`
   position: absolute;
-  bottom: 15vh;
+  bottom: 20vh;
   margin-left: 50%;
   transform: translate(-50%);
   width: 70vw;
@@ -92,18 +92,18 @@ const Home = () => {
         <LogoWrapper>
           <TitleHome>Viktor Hulei</TitleHome>
           <Subtitle>Front-End Developer</Subtitle>
-          {/* <ReactImg src={react} alt="react_image" /> */}
+          <ReactImg src={react} alt="react_image" />
         </LogoWrapper>
         <PhotoWrapper>
           <Square />
-          {/* <Photo src={me} alt="me" /> */}
+          <Photo src={me} alt="me" />
         </PhotoWrapper>
         <StylesProvider injectFirst>
           <ButtonsWrapper>
             <HomeButton
               variant="contained"
               color="secondary"
-              endIcon={<SaveIcon />}
+              endIcon={<FileIcon />}
             >
               CV
             </HomeButton>
