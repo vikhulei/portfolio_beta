@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Title } from "../styles/Common";
-import me from "../assets/me.png";
-import react from "../assets/react.png";
+// import me from "../assets/me.png";
+// import react from "../assets/react.png";
 import { Button, StylesProvider } from "@material-ui/core";
 import SaveIcon from "@material-ui/icons/Save";
 import SendIcon from "@material-ui/icons/Send";
@@ -91,11 +91,11 @@ const Home = () => {
         <LogoWrapper>
           <TitleHome>Viktor Hulei</TitleHome>
           <Subtitle>Front-End Developer</Subtitle>
-          <ReactImg src={react} alt="react_image" />
+          {/* <ReactImg src={react} alt="react_image" /> */}
         </LogoWrapper>
         <PhotoWrapper>
           <Square />
-          <Photo src={me} alt="me" />
+          {/* <Photo src={me} alt="me" /> */}
         </PhotoWrapper>
         <StylesProvider injectFirst>
           <ButtonsWrapper>
