@@ -48,7 +48,7 @@ const ReactImg = styled.img`
 
 const PhotoWrapper = styled.div`
   position: absolute;
-  bottom: 30vh;
+  bottom: 35vh;
   margin-left: 50%;
   transform: translate(-50%);
   width: 150px;
@@ -72,7 +72,7 @@ const Photo = styled.img`
 
 const ButtonsWrapper = styled.div`
   position: absolute;
-  bottom: 10vh;
+  bottom: 15vh;
   margin-left: 50%;
   transform: translate(-50%);
   width: 70vw;
@@ -82,6 +82,7 @@ const ButtonsWrapper = styled.div`
 
 const HomeButton = styled(Button)`
   width: 90px;
+  height: 30px;
 `;
 
 const Home = () => {
@@ -102,14 +103,14 @@ const Home = () => {
             <HomeButton
               variant="contained"
               color="secondary"
-              // endIcon={<SaveIcon />}
+              endIcon={<SaveIcon />}
             >
               CV
             </HomeButton>
             <HomeButton
               variant="contained"
               color="primary"
-              // endIcon={<SendIcon />}
+              endIcon={<SendIcon />}
             >
               Email
             </HomeButton>
