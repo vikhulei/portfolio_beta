@@ -23,8 +23,6 @@ const LogoWrapper = styled.div`
 
 const TitleHome = styled(Title)`
   margin-bottom: 10px;
-  font-weight: 300;
-  font-size: 12vw;
 `;
 
 const Subtitle = styled.p`
