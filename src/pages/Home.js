@@ -1,5 +1,5 @@
-import me from "../assets/me.png";
-import react from "../assets/react.png";
+// import me from "../assets/me.png";
+// import react from "../assets/react.png";
 import { StylesProvider } from "@material-ui/core";
 import FileIcon from "@material-ui/icons/FileCopy";
 import SendIcon from "@material-ui/icons/Send";
@@ -23,11 +23,11 @@ const Home = () => {
         <LogoWrapper>
           <TitleHome>Viktor Hulei</TitleHome>
           <Subtitle>Front-End Developer</Subtitle>
-          <ReactImg src={react} alt="react_image" />
+          {/* <ReactImg src={react} alt="react_image" /> */}
         </LogoWrapper>
         <PhotoWrapper>
           <Square />
-          <Photo src={me} alt="me" />
+          {/* <Photo src={me} alt="me" /> */}
         </PhotoWrapper>
         <StylesProvider injectFirst>
           <ButtonsWrapper>
