@@ -1,9 +1,11 @@
 import { useRef } from "react";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 import "./styles.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contacts from "./pages/Contacts";
+import SideBar from "./components/Sidebar";
 
 export default function App() {
   const [homeref, aboutref, projectsref, contactsref] = [
@@ -28,13 +30,14 @@ export default function App() {
 
   return (
     <div className="App">
-      <div ref={homeref} />
+      <SideBar />
+      <div id="home" />
       <Home />
-      <div ref={aboutref} />
+      <div id="about" />
       <About />
-      <div ref={projectsref} />
+      <div id="projects" />
       <Projects />
-      <div ref={contactsref} />
+      <div id="contacts" />
       <Contacts />
     </div>
   );
