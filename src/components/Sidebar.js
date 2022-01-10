@@ -4,7 +4,7 @@ const Wrapper = styled.div`
   position: fixed;
   top: 0;
   height: 100vh;
-  width: 50%;
+  width: 100%;
   background-color: grey;
   display: flex;
   flex-direction: column;
@@ -14,9 +14,20 @@ const Wrapper = styled.div`
 `;
 
 const NavLink = styled.a`
+  position: relative;
   text-decoration: none;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 2px black;
+  &:active {
+    transform: translate(3px, 3px);
+    color: lightgrey;
+  }
 `;
 
 const SideBar = () => {
