@@ -3,8 +3,7 @@ import { Button } from "@material-ui/core";
 import { Title } from "../styles/Common";
 
 const Wrapper = styled.div`
-  position: sticky;
-  top: 0;
+  position: relative;
   height: 100vh;
   width: 100%;
   background-color: rgb(67, 69, 71);

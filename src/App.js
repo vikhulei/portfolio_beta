@@ -1,5 +1,4 @@
-import { useRef } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { useState } from "react";
 import "./styles.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -8,29 +7,13 @@ import Contacts from "./pages/Contacts";
 import SideBar from "./components/Sidebar";
 
 export default function App() {
-  const [homeref, aboutref, projectsref, contactsref] = [
-    useRef(),
-    useRef(),
-    useRef(),
-    useRef()
-  ];
+  const [isOpen, setOpen] = useState(false);
 
-  const goHome = () => {
-    homeref.current.scrollIntoView();
-  };
-  const goAbout = () => {
-    aboutref.current.scrollIntoView();
-  };
-  const goProjects = () => {
-    projectsref.current.scrollIntoView();
-  };
-  const goContacts = () => {
-    contactsref.current.scrollIntoView();
-  };
+  const toggleHam = () => setOpen(!isOpen);
 
   return (
     <div className="App">
-      <SideBar />
+      <SideBar isOpen={isOpen} setOpen={setOpen} toggleHam={toggleHam} />
       <div id="home" />
       <Home />
       <div id="about" />
