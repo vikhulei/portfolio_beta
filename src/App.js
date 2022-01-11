@@ -12,7 +12,7 @@ export default function App() {
   const toggleHam = () => setOpen(!isOpen);
 
   return (
-    <div className="App">
+    <div>
       <SideBar isOpen={isOpen} setOpen={setOpen} toggleHam={toggleHam} />
       <div id="home" />
       <Home />

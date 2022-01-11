@@ -1,11 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+
+body {
+  font-family: "Josefin Sans", cursive;
+}
+
 * {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
-.App {
-  position: sticky;
-  font-family: arial;
-  /* z-index: -99; */
-}
+/* .App {
+  /* position: sticky; */
+/* font-family: "Futura PT"; */
