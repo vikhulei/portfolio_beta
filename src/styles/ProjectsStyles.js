@@ -11,12 +11,12 @@ const Wrapper = styled.div`
 const ImagesWrapper = styled.div`
   position: relative;
   margin: 0 auto;
-  top: 5%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  top: 10%;
   width: 80vw;
-  height: 70vh;
-  background-color: lightblue;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
 `;
 
 const Image = styled.img`
