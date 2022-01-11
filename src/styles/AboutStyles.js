@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Title } from "./Common";
 
 const Wrapper = styled.div`
   position: relative;
@@ -7,11 +6,6 @@ const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
   background-color: rgb(67, 71, 81);
-  z-index: 20;
-`;
-
-const TitleAbout = styled(Title)`
-  text-align: center;
 `;
 
 const TextWrapper = styled.div`
@@ -41,4 +35,4 @@ const Bullet = styled.li`
   margin: 5px 0 0 40px;
 `;
 
-export { Wrapper, TitleAbout, TextWrapper, PreText, Heading, Bullet };
+export { Wrapper, TextWrapper, PreText, Heading, Bullet };

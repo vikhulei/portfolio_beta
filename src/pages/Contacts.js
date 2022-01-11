@@ -1,17 +1,10 @@
-import styled from "styled-components";
+import { Title } from "../styles/Common";
+import { Wrapper } from "../styles/ContactsStyles";
 
-const Wrapper = styled.div`
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background-color: lightsalmon;
-  z-index: 40;
-`;
-
-const Contacts = ({ myref }) => {
+const Contacts = () => {
   return (
-    <Wrapper ref={myref}>
-      <p>Hello from Contacts</p>
+    <Wrapper>
+      <Title>Contacts</Title>
     </Wrapper>
   );
 };

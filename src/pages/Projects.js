@@ -1,17 +1,19 @@
-import styled from "styled-components";
+import { Title } from "../styles/Common";
+import { Wrapper, ImagesWrapper, Image } from "../styles/ProjectsStyles";
+import me from "../assets/me.png";
 
-const Wrapper = styled.div`
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background-color: rgb(67, 69, 71);
-  z-index: 30;
-`;
-
-const Projects = ({ myref }) => {
+const Projects = () => {
   return (
-    <Wrapper ref={myref}>
-      <p>Hello from Projects</p>
+    <Wrapper>
+      <Title>Projects</Title>
+      <ImagesWrapper>
+        <Image src={me} alt="me" />
+        <Image src={me} alt="me" />
+        <Image src={me} alt="me" />
+        <Image src={me} alt="me" />
+        <Image src={me} alt="me" />
+        <Image src={me} alt="me" />
+      </ImagesWrapper>
     </Wrapper>
   );
 };
