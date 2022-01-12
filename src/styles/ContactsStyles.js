@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const Wrapper = styled.div`
   position: relative;
@@ -8,7 +9,7 @@ const Wrapper = styled.div`
   background-color: rgb(57, 71, 81);
 `;
 
-const ImageWrapper = styled.div `
+const ContentWrapper = styled.div `
   position: relative;
   margin: 0 auto;
   top: 5vh;
@@ -16,6 +17,7 @@ const ImageWrapper = styled.div `
 `;
 
 const Image = styled.img `
+  position: absolute;
   width: 100%;
   object-fit: contain;
 `;
@@ -39,6 +41,9 @@ const IconsWrapper = styled.div `
 
 `;
 
+const WhApp = styled(WhatsAppIcon) `
+  fill: green;
+`
 
 
-export { Wrapper, ImageWrapper, Image };
+export { Wrapper, ContentWrapper, Image, IconsWrapper, WhApp };
