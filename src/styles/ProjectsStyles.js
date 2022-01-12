@@ -11,8 +11,9 @@ const Wrapper = styled.div`
 const ImagesWrapper = styled.div`
   position: relative;
   margin: 0 auto;
-  top: 10%;
+  top: 8%;
   width: 80vw;
+  height: 50vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
