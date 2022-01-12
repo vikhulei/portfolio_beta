@@ -12,7 +12,7 @@ const TextWrapper = styled.div`
   position: relative;
   background-color: lightgrey;
   box-shadow: 0 0 40px lightgrey;
-  height: 70vh;
+  height: 60vh;
   width: 80vw;
   top: 5%;
   margin: 0 auto;
