@@ -8,4 +8,37 @@ const Wrapper = styled.div`
   background-color: rgb(57, 71, 81);
 `;
 
-export { Wrapper };
+const ImageWrapper = styled.div `
+  position: relative;
+  margin: 0 auto;
+  top: 5vh;
+  width: 70vw;
+`;
+
+const Image = styled.img `
+  width: 100%;
+  object-fit: contain;
+`;
+
+const ContactsWrapper = styled.div `
+  position: relative;
+  margin: 0 auto;
+  top: 15vh;
+  width: 70vw;
+`;
+
+const PhoneNumber = styled.p `
+
+`;
+
+const EmailAddress = styled.p `
+
+`;
+
+const IconsWrapper = styled.div `
+
+`;
+
+
+
+export { Wrapper, ImageWrapper, Image };
