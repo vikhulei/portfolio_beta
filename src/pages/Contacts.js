@@ -4,10 +4,11 @@ import {
   ContentWrapper,
   Image,
   IconsWrapper,
-  PhoneNumberWrapper,
+  ContactWrapper,
   EmailAddressWrapper,
   PhoneNumber,
-  EmailAddress
+  EmailAddress,
+  ContactsWrapper
 } from "../styles/ContactsStyles";
 import contacts from "../assets/contacts.png";
 import * as Fa from "react-icons/fa";
@@ -18,18 +19,26 @@ const Contacts = () => {
   return (
     <Wrapper>
       <Title>Contacts</Title>
-      <AiOutlineMail fontSize="3rem" color="#31BE11" />
-      <PhoneNumber>383837373</PhoneNumber>
-      <AiOutlinePhone fontSize="3rem" color="#31BE11" />
+
       <ContentWrapper>
         <Image src={contacts} alt="contacts" />
+        <ContactsWrapper>
+          <AiOutlinePhone fontSize="2.2rem" color="#31BE11" />
+          <PhoneNumber>+38063 793-1590</PhoneNumber>
+
+          <AiOutlineMail fontSize="2.2rem" color="lightcoral" />
+          <EmailAddress href="mailto:vikhulei@gmail.com">
+            vikhulei@gmail.com
+          </EmailAddress>
+        </ContactsWrapper>
         <IconsWrapper>
-          <Fa.FaViber fontSize="3rem" color="#AD35DE" />
-          <Fa.FaWhatsapp fontSize="3rem" color="#31BE11" />
-          <Fa.FaLinkedin fontSize="3rem" color="#31BE11" />
-          <Fa.FaGithub fontSize="3rem" color="#31BE11" />
-          <Fa.FaTelegram fontSize="3rem" color="#31BE11" />
-          <Fa.FaFacebookMessenger fontSize="3rem" color="#31BE11" />
+          <Fa.FaFacebookMessenger fontSize="2.5rem" color="#0037FD" />
+
+          <Fa.FaWhatsapp fontSize="2.5rem" color="#31BE11" />
+          <Fa.FaLinkedin fontSize="2.5rem" color="#3C65F3" />
+          <Fa.FaGithub fontSize="2.5rem" color="white" />
+          <Fa.FaTelegram fontSize="2.5rem" color="#4BB6F2" />
+          <Fa.FaViber fontSize="2.5rem" color="#B017C4" />
         </IconsWrapper>
       </ContentWrapper>
     </Wrapper>

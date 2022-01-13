@@ -13,7 +13,7 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
   top: 5vh;
   width: 70vw;
-  height: 55vh;
+  height: 60vh;
 `;
 
 const Image = styled.img`
@@ -26,27 +26,39 @@ const Image = styled.img`
 const ContactsWrapper = styled.div`
   position: relative;
   margin: 0 auto;
-  top: 15vh;
-  width: 70vw;
+  width: fit-content;
+  height: 30%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-column-gap: 10px;
+  align-items: center;
 `;
 
-const PhoneNumberWrapper = styled.div`
+const ContactWrapper = styled.div`
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const EmailAddressWrapper = styled.div`
   display: flex;
 `;
 
-const PhoneNumber = styled.span`
-  font-size: 2rem;
+const PhoneNumber = styled.p`
+  font-size: 1.3rem;
+  color: white;
 `;
 
-const EmailAddress = styled.p``;
+const EmailAddress = styled.a`
+  font-size: 1.3rem;
+  color: white;
+`;
 
 const IconsWrapper = styled.div`
   width: 100%;
-  height: 100%;
+  height: 70%;
+  padding-top: 40px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
@@ -58,7 +70,8 @@ export {
   ContentWrapper,
   Image,
   IconsWrapper,
-  PhoneNumberWrapper,
+  ContactsWrapper,
+  ContactWrapper,
   EmailAddressWrapper,
   PhoneNumber,
   EmailAddress
