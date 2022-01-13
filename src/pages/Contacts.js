@@ -3,11 +3,13 @@ import {
   Wrapper,
   ContentWrapper,
   Image,
-  IconsWrapper
+  IconsWrapper,
+  PhoneNumberWrapper,
+  EmailAddressWrapper,
+  PhoneNumber,
+  EmailAddress
 } from "../styles/ContactsStyles";
 import contacts from "../assets/contacts.png";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import * as Fa from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlinePhone } from "react-icons/ai";
@@ -16,6 +18,9 @@ const Contacts = () => {
   return (
     <Wrapper>
       <Title>Contacts</Title>
+      <AiOutlineMail fontSize="3rem" color="#31BE11" />
+      <PhoneNumber>383837373</PhoneNumber>
+      <AiOutlinePhone fontSize="3rem" color="#31BE11" />
       <ContentWrapper>
         <Image src={contacts} alt="contacts" />
         <IconsWrapper>
@@ -25,8 +30,6 @@ const Contacts = () => {
           <Fa.FaGithub fontSize="3rem" color="#31BE11" />
           <Fa.FaTelegram fontSize="3rem" color="#31BE11" />
           <Fa.FaFacebookMessenger fontSize="3rem" color="#31BE11" />
-          <AiOutlineMail fontSize="3rem" color="#31BE11" />
-          <AiOutlinePhone fontSize="3rem" color="#31BE11" />
         </IconsWrapper>
       </ContentWrapper>
     </Wrapper>

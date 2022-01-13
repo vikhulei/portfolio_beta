@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const Wrapper = styled.div`
   position: relative;
@@ -14,12 +13,14 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
   top: 5vh;
   width: 70vw;
+  height: 55vh;
 `;
 
 const Image = styled.img`
   position: absolute;
   width: 100%;
-  object-fit: contain;
+  max-height: 100%;
+  object-fit: cover;
 `;
 
 const ContactsWrapper = styled.div`
@@ -29,15 +30,36 @@ const ContactsWrapper = styled.div`
   width: 70vw;
 `;
 
-const PhoneNumber = styled.p``;
+const PhoneNumberWrapper = styled.div`
+  display: flex;
+`;
+
+const EmailAddressWrapper = styled.div`
+  display: flex;
+`;
+
+const PhoneNumber = styled.span`
+  font-size: 2rem;
+`;
 
 const EmailAddress = styled.p``;
 
-const IconsWrapper = styled.div``;
-
-const WhApp = styled(WhatsAppIcon)`
-  fill: green;
-  width: 50px;
+const IconsWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
 `;
 
-export { Wrapper, ContentWrapper, Image, IconsWrapper, WhApp };
+export {
+  Wrapper,
+  ContentWrapper,
+  Image,
+  IconsWrapper,
+  PhoneNumberWrapper,
+  EmailAddressWrapper,
+  PhoneNumber,
+  EmailAddress
+};
