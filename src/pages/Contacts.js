@@ -3,6 +3,7 @@ import {
   Wrapper,
   ContentWrapper,
   Image,
+  Icon,
   IconsWrapper,
   ContactWrapper,
   EmailAddressWrapper,
@@ -24,7 +25,7 @@ const Contacts = () => {
         <Image src={contacts} alt="contacts" />
         <ContactsWrapper>
           <AiOutlinePhone fontSize="2.2rem" color="#31BE11" />
-          <PhoneNumber>+38063 793-1590</PhoneNumber>
+          <PhoneNumber>+380637931590</PhoneNumber>
 
           <AiOutlineMail fontSize="2.2rem" color="lightcoral" />
           <EmailAddress href="mailto:vikhulei@gmail.com">
@@ -32,7 +33,9 @@ const Contacts = () => {
           </EmailAddress>
         </ContactsWrapper>
         <IconsWrapper>
-          <Fa.FaFacebookMessenger fontSize="2.5rem" color="#0037FD" />
+          <Icon href="http://m.me/victor.guley" target="_blank"> <Fa.FaFacebookMessenger color="#0037FD" /> </Icon>
+
+          
 
           <Fa.FaWhatsapp fontSize="2.5rem" color="#31BE11" />
           <Fa.FaLinkedin fontSize="2.5rem" color="#3C65F3" />

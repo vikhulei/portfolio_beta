@@ -55,7 +55,12 @@ const EmailAddress = styled.a`
   color: white;
 `;
 
+const Icon = styled.a`
+  font-size: 2.5rem;
+`;
+
 const IconsWrapper = styled.div`
+  position: relative;
   width: 100%;
   height: 70%;
   padding-top: 40px;
@@ -63,12 +68,14 @@ const IconsWrapper = styled.div`
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
+  z-index: 99;
 `;
 
 export {
   Wrapper,
   ContentWrapper,
   Image,
+  Icon,
   IconsWrapper,
   ContactsWrapper,
   ContactWrapper,
