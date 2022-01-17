@@ -43,7 +43,7 @@ const Contacts = () => {
           <Icon href="https://telegram.me/vikhulei" target="_blank">
             <Fa.FaTelegram fontSize="2.5rem" color="#4BB6F2" />
           </Icon>
-          <Icon href="viber://chat?number=12345678" target="_blank">
+          <Icon href="viber://chat?number=+380934628616" target="_blank">
             <Fa.FaViber fontSize="2.5rem" color="#B017C4" />
           </Icon>
           <Icon href="https://www.linkedin.com/in/vikhulei" target="_blank">
