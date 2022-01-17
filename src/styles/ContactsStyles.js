@@ -45,7 +45,8 @@ const EmailAddressWrapper = styled.div`
   display: flex;
 `;
 
-const PhoneNumber = styled.p`
+const PhoneNumber = styled.a`
+  text-decoration: none;
   font-size: 1.3rem;
   color: white;
 `;

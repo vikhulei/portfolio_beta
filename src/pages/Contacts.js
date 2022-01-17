@@ -25,7 +25,7 @@ const Contacts = () => {
         <Image src={contacts} alt="contacts" />
         <ContactsWrapper>
           <AiOutlinePhone fontSize="2.2rem" color="#31BE11" />
-          <PhoneNumber>+380637931590</PhoneNumber>
+          <PhoneNumber href="tel:+380637931590">+380637931590</PhoneNumber>
 
           <AiOutlineMail fontSize="2.2rem" color="lightcoral" />
           <EmailAddress href="mailto:vikhulei@gmail.com">
@@ -33,6 +33,9 @@ const Contacts = () => {
           </EmailAddress>
         </ContactsWrapper>
         <IconsWrapper>
+          <Icon href="sms:+380637931590">
+            <Fa.FaSms fontSize="2.5rem" color="darkgrey" />
+          </Icon>
           <Icon href="http://m.me/victor.guley" target="_blank">
             {" "}
             <Fa.FaFacebookMessenger color="#0037FD" />{" "}
@@ -43,14 +46,11 @@ const Contacts = () => {
           <Icon href="https://telegram.me/vikhulei" target="_blank">
             <Fa.FaTelegram fontSize="2.5rem" color="#4BB6F2" />
           </Icon>
-          <Icon href="viber://chat?number=%2B380934628616" target="_blank">
-            <Fa.FaViber fontSize="2.5rem" color="#B017C4" />
+          <Icon href="https://github.com/vikhulei" target="_blank">
+            <Fa.FaGithub fontSize="2.5rem" color="white" />
           </Icon>
           <Icon href="https://www.linkedin.com/in/vikhulei" target="_blank">
             <Fa.FaLinkedin fontSize="2.5rem" color="#3C65F3" />
-          </Icon>
-          <Icon href="https://github.com/vikhulei" target="_blank">
-            <Fa.FaGithub fontSize="2.5rem" color="white" />
           </Icon>
         </IconsWrapper>
       </ContentWrapper>
@@ -63,3 +63,9 @@ export default Contacts;
 // "viber://chat/?number=%2B380934628616"
 // "viber://chat/?number=%2B380637931590"
 // viber://chat?number=1234567894
+
+{
+  /* <Icon href="viber://chat?number=%2B380934628616" target="_blank">
+            <Fa.FaViber fontSize="2.5rem" color="#B017C4" />
+          </Icon> */
+}
