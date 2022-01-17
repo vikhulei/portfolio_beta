@@ -11,7 +11,7 @@ import {
   EmailAddress,
   ContactsWrapper
 } from "../styles/ContactsStyles";
-import contacts from "../assets/contacts.png";
+// import contacts from "../assets/contacts.png";
 import * as Fa from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlinePhone } from "react-icons/ai";
@@ -22,7 +22,7 @@ const Contacts = () => {
       <Title>Contacts</Title>
 
       <ContentWrapper>
-        <Image src={contacts} alt="contacts" />
+        {/* <Image src={contacts} alt="contacts" /> */}
         <ContactsWrapper>
           <AiOutlinePhone fontSize="2.2rem" color="#31BE11" />
           <PhoneNumber>+380637931590</PhoneNumber>
@@ -33,15 +33,25 @@ const Contacts = () => {
           </EmailAddress>
         </ContactsWrapper>
         <IconsWrapper>
-          <Icon href="http://m.me/victor.guley" target="_blank"> <Fa.FaFacebookMessenger color="#0037FD" /> </Icon>
-
-          
-
-          <Fa.FaWhatsapp fontSize="2.5rem" color="#31BE11" />
-          <Fa.FaLinkedin fontSize="2.5rem" color="#3C65F3" />
-          <Fa.FaGithub fontSize="2.5rem" color="white" />
-          <Fa.FaTelegram fontSize="2.5rem" color="#4BB6F2" />
-          <Fa.FaViber fontSize="2.5rem" color="#B017C4" />
+          <Icon href="http://m.me/victor.guley" target="_blank">
+            {" "}
+            <Fa.FaFacebookMessenger color="#0037FD" />{" "}
+          </Icon>
+          <Icon href="https://wa.me/+380639731590" target="_blank">
+            <Fa.FaWhatsapp fontSize="2.5rem" color="#31BE11" />{" "}
+          </Icon>
+          <Icon href="#" target="_blank">
+            <Fa.FaTelegram fontSize="2.5rem" color="#4BB6F2" />
+          </Icon>
+          <Icon href="#" target="_blank">
+            <Fa.FaViber fontSize="2.5rem" color="#B017C4" />
+          </Icon>
+          <Icon href="#" target="_blank">
+            <Fa.FaLinkedin fontSize="2.5rem" color="#3C65F3" />
+          </Icon>
+          <Icon href="#" target="_blank">
+            <Fa.FaGithub fontSize="2.5rem" color="white" />
+          </Icon>
         </IconsWrapper>
       </ContentWrapper>
     </Wrapper>
