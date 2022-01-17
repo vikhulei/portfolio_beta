@@ -68,7 +68,6 @@ const IconsWrapper = styled.div`
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
-  z-index: 99;
 `;
 
 export {
