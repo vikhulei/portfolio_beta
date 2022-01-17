@@ -11,11 +11,10 @@ import {
 const About = () => {
   return (
     <Wrapper>
-      <Title>About</Title>
+      <Title>About me</Title>
       <TextWrapper>
         <PreText>
-          My jorney started in July 2020 with the completion of HTM/CSS/JS
-          course.
+          Open for a part-time work at the position of front-end developer.
         </PreText>
         <Heading>Current stack:</Heading>
         <Bullet>HTML/CSS/JS</Bullet>
