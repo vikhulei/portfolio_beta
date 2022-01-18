@@ -14,7 +14,8 @@ const About = () => {
       <Title>About me</Title>
       <TextWrapper>
         <PreText>
-          Open for a part-time work at the position of front-end developer.
+          I am a front-end developer with about two years experience and over 20
+          websites and apps developed to date.
         </PreText>
         <Heading>Current stack:</Heading>
         <Bullet>HTML/CSS/JS</Bullet>
@@ -29,7 +30,6 @@ const About = () => {
         <Bullet>Redux</Bullet>
         <Bullet>Express for Node.js</Bullet>
         <Bullet>MongoDB</Bullet>
-        <Bullet>MySQL</Bullet>
       </TextWrapper>
     </Wrapper>
   );
