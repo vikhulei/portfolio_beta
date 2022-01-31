@@ -17,10 +17,16 @@ const Projects = () => {
     <Wrapper>
       <Title>Projects</Title>
       <ImagesWrapper>
-        <ImageLink href="#">
+        <ImageLink
+          href="https://vikhulei.github.io/safety/index.html"
+          target="_blank"
+        >
           <Image src={safety} alt="safety" />
         </ImageLink>
-        <ImageLink href="#">
+        <ImageLink
+          href="http://bethanynivki.surge.sh/pages/home"
+          target="_blank"
+        >
           <Image src={church} alt="church" />
         </ImageLink>
         <ImageLink href="#">

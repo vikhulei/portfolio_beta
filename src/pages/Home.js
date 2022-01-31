@@ -6,6 +6,7 @@ import FileIcon from "@material-ui/icons/FileCopy";
 import SendIcon from "@material-ui/icons/Send";
 import {
   Wrapper,
+  MainSection,
   LogoWrapper,
   TitleHome,
   Subtitle,
@@ -21,15 +22,19 @@ const Home = () => {
   return (
     <>
       <Wrapper>
-        <LogoWrapper>
-          <TitleHome>Viktor Hulei</TitleHome>
-          <Subtitle>Front-End Developer</Subtitle>
-          <ReactImg src={react} alt="react_image" />
-        </LogoWrapper>
-        <PhotoWrapper>
-          <Square />
-          <Photo src={me} alt="me" />
-        </PhotoWrapper>
+        <MainSection>
+          <LogoWrapper>
+            <TitleHome>Viktor Hulei</TitleHome>
+            <Subtitle>Front-End Developer</Subtitle>
+            <ReactImg src={react} alt="react_image" />
+          </LogoWrapper>
+
+          <PhotoWrapper>
+            <Square />
+            <Photo src={me} alt="me" />
+          </PhotoWrapper>
+        </MainSection>
+
         <StylesProvider injectFirst>
           <ButtonsWrapper>
             <HomeButton
