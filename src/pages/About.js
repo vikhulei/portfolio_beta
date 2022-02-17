@@ -14,7 +14,7 @@ const About = () => {
       <Title>About</Title>
       <TextWrapper>
         <PreText>
-          My jorney started in July 2020 with the completion of HTM/CSS/JS
+          My coding jorney started in July 2020 with the completion of HTM/CSS/JS
           course.
         </PreText>
         <Heading>Current stack:</Heading>

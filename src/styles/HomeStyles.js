@@ -13,19 +13,21 @@ const Wrapper = styled.div`
 const LogoWrapper = styled.div`
   position: absolute;
   top: 13vh;
-  margin-left: 50%;
-  transform: translate(-50%);
   text-align: center;
-  height: 140px;
   width: 100%;
+  @media screen and (min-width: 800px) {
+    width: 50%;
+    right: 0;
+    height: 60%;
+  }
 `;
 
-const TitleHome = styled(Title)`
-  margin-bottom: 10px;
+const TitleHome = styled(Title)` margin-bottom: 10px;
+  font-size: min(14vw, 400%);
 `;
 
 const Subtitle = styled.p`
-  font-size: 6vw;
+  font-size: 200%;
   font-style: italic;
   color: white;
 `;
@@ -37,6 +39,9 @@ const ReactImg = styled.img`
   transform: translate(-50%);
   object-fit: contain;
   height: 150%;
+  @media screen and (min-width: 800px) {
+    height: 80%;
+  }
 `;
 
 const PhotoWrapper = styled.div`
