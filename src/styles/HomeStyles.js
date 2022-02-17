@@ -13,10 +13,6 @@ const Wrapper = styled.div`
   z-index: 10;
 `;
 
-const MainSection = styled.div`
-  position: absolute;
-`;
-
 const LogoWrapper = styled.div`
   position: absolute;
   top: 13vh;
@@ -40,7 +36,7 @@ const Subtitle = styled.p`
 `;
 
 const ReactImg = styled.img`
-  position: relative;
+  position: absolute;
   bottom: 0;
   left: 50%;
   transform: translate(-50%);
@@ -92,7 +88,6 @@ const HomeButton = styled(Button)`
 
 export {
   Wrapper,
-  MainSection,
   LogoWrapper,
   TitleHome,
   Subtitle,

@@ -6,7 +6,6 @@ import FileIcon from "@material-ui/icons/FileCopy";
 import SendIcon from "@material-ui/icons/Send";
 import {
   Wrapper,
-  MainSection,
   LogoWrapper,
   TitleHome,
   Subtitle,
@@ -22,7 +21,6 @@ const Home = () => {
   return (
     <>
       <Wrapper>
-        <MainSection>
           <LogoWrapper>
             <TitleHome>Viktor Hulei</TitleHome>
             <Subtitle>Front-End Developer</Subtitle>
@@ -33,7 +31,6 @@ const Home = () => {
             <Square />
             <Photo src={me} alt="me" />
           </PhotoWrapper>
-        </MainSection>
 
         <StylesProvider injectFirst>
           <ButtonsWrapper>
