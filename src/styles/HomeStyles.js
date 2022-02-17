@@ -3,11 +3,18 @@ import { Button } from "@material-ui/core";
 import { Title } from "../styles/Common";
 
 const Wrapper = styled.div`
+  /* @media screen and (min-width: 600px) {
+    display: flex;
+  } */
   position: relative;
   height: 100vh;
   width: 100%;
   background-color: rgb(67, 69, 71);
   z-index: 10;
+`;
+
+const MainSection = styled.div`
+  position: absolute;
 `;
 
 const LogoWrapper = styled.div`
@@ -33,7 +40,7 @@ const Subtitle = styled.p`
 `;
 
 const ReactImg = styled.img`
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 50%;
   transform: translate(-50%);
@@ -85,6 +92,7 @@ const HomeButton = styled(Button)`
 
 export {
   Wrapper,
+  MainSection,
   LogoWrapper,
   TitleHome,
   Subtitle,

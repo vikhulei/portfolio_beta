@@ -11,7 +11,7 @@ import {
 const About = () => {
   return (
     <Wrapper>
-      <Title>About</Title>
+      <Title>About me</Title>
       <TextWrapper>
         <PreText>
           My coding jorney started in July 2020 with the completion of HTM/CSS/JS
@@ -30,7 +30,6 @@ const About = () => {
         <Bullet>Redux</Bullet>
         <Bullet>Express for Node.js</Bullet>
         <Bullet>MongoDB</Bullet>
-        <Bullet>MySQL</Bullet>
       </TextWrapper>
     </Wrapper>
   );

@@ -12,11 +12,11 @@ const TextWrapper = styled.div`
   position: relative;
   background-color: lightgrey;
   box-shadow: 0 0 40px lightgrey;
-  height: 60vh;
+  height: 70vh;
   width: 80vw;
   top: 5%;
   margin: 0 auto;
-  padding: 10px;
+  padding: 8px;
 `;
 
 const PreText = styled.div`

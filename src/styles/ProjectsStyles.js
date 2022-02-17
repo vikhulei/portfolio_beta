@@ -20,9 +20,15 @@ const ImagesWrapper = styled.div`
   row-gap: 20px;
 `;
 
+const ImageLink = styled.a`
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
 const Image = styled.img`
   width: 100%;
   object-fit: cover;
 `;
 
-export { Wrapper, ImagesWrapper, Image };
+export { Wrapper, ImagesWrapper, ImageLink, Image };

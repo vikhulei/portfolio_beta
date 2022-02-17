@@ -45,7 +45,8 @@ const EmailAddressWrapper = styled.div`
   display: flex;
 `;
 
-const PhoneNumber = styled.p`
+const PhoneNumber = styled.a`
+  text-decoration: none;
   font-size: 1.3rem;
   color: white;
 `;
@@ -63,12 +64,11 @@ const IconsWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 70%;
-  padding-top: 40px;
+  padding-top: 80px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
-  z-index: 99;
 `;
 
 export {
