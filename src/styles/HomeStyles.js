@@ -18,9 +18,11 @@ const LogoWrapper = styled.div`
   top: 13vh;
   text-align: center;
   width: 100%;
+  // background-color: lightcoral;
   @media screen and (min-width: 800px) {
-    width: 50%;
-    right: 0;
+    padding-top: 20px;
+    width: fit-content;
+    left: 55vw;
     height: 60%;
   }
 `;
@@ -30,7 +32,7 @@ const TitleHome = styled(Title)` margin-bottom: 10px;
 `;
 
 const Subtitle = styled.p`
-  font-size: 200%;
+font-size: min(12vw, 220%);
   font-style: italic;
   color: white;
 `;
@@ -39,11 +41,13 @@ const ReactImg = styled.img`
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-47%);
   object-fit: contain;
   height: 150%;
   @media screen and (min-width: 800px) {
-    height: 80%;
+    height: 30vw;
+    top: 0;
+    transform: translate(-47%);
   }
 `;
 
@@ -54,6 +58,16 @@ const PhotoWrapper = styled.div`
   transform: translate(-50%);
   width: 150px;
   height: 150px;
+  @media screen and (min-width: 800px) {
+    top: 20vh;
+    margin-left: 0;
+    transform: translate(0);
+    right: 60vw;
+    width: 20vw;
+    height: 20vw;
+    max-width: 300px;
+    max-height: 300px;
+  }
 `;
 
 const Square = styled.div`
