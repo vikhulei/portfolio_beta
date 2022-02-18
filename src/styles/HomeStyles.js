@@ -46,6 +46,7 @@ const ReactImg = styled.img`
   height: 150%;
   @media screen and (min-width: 800px) {
     height: 30vw;
+    min-height: 400px;
     top: 0;
     transform: translate(-47%);
   }
@@ -63,6 +64,8 @@ const PhotoWrapper = styled.div`
     margin-left: 0;
     transform: translate(0);
     right: 60vw;
+    min-width: 230px;
+    min-height: 230px;
     width: 20vw;
     height: 20vw;
     max-width: 300px;
@@ -93,11 +96,25 @@ const ButtonsWrapper = styled.div`
   width: 70vw;
   display: flex;
   justify-content: space-between;
+  @media screen and (min-width: 800px) {
+    top: calc(20vh + 20vw + 70px);
+    margin-left: 0;
+    transform: translate(0);
+    min-width: 230px;
+    width: 20vw;
+    max-width: 300px;
+    right: 60vw;
+  }
 `;
 
 const HomeButton = styled(Button)`
   width: 90px;
   height: 30px;
+  @media screen and (min-width: 800px) {
+    height: 40px;
+    width: 110px;
+  }
+
 `;
 
 export {
