@@ -2,10 +2,11 @@ import styled from "styled-components";
 import Hamburger from "hamburger-react";
 
 const NavWrapper = styled.div`
+
   position: fixed;
   top: 0;
   left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
-  transition: 500ms;
+  transition: 300ms;
   height: 100vh;
   width: 100%;
   background-color: grey;
@@ -15,6 +16,15 @@ const NavWrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  @media screen and (min-width: 800px) {
+    left: 0;
+    transition: 0ms;
+    width: 170px;
+    height: 500px;
+    top: 40%;
+    transform: translateY(-50%);
+    background-color: rgba(30, 30, 30, 0)
+  }
 `;
 
 const NavLink = styled.a`
@@ -32,6 +42,9 @@ const NavLink = styled.a`
     transform: translate(3px, 3px);
     color: lightgrey;
   }
+  @media screen and (min-width: 800px) {
+    border-bottom: none;
+  }
 `;
 
 const HamWrapper = styled.div`
@@ -41,6 +54,9 @@ const HamWrapper = styled.div`
   justify-content: right;
   align-items: center;
   z-index: 99;
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
 `;
 
 const SideBar = ({ isOpen, setOpen, toggleHam }) => {

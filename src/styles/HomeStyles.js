@@ -63,7 +63,7 @@ const PhotoWrapper = styled.div`
     top: 20vh;
     margin-left: 0;
     transform: translate(0);
-    right: 55vw;
+    right: 50vw;
     min-width: 230px;
     min-height: 230px;
     width: 20vw;
@@ -103,7 +103,7 @@ const ButtonsWrapper = styled.div`
     min-width: 230px;
     width: 20vw;
     max-width: 300px;
-    right: 55vw;
+    right: 50vw;
   }
 `;
 
