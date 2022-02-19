@@ -22,7 +22,7 @@ const LogoWrapper = styled.div`
   @media screen and (min-width: 800px) {
     padding-top: 20px;
     width: fit-content;
-    left: 55vw;
+    left: 60vw;
     height: 60%;
   }
 `;
@@ -63,7 +63,7 @@ const PhotoWrapper = styled.div`
     top: 20vh;
     margin-left: 0;
     transform: translate(0);
-    right: 60vw;
+    right: 55vw;
     min-width: 230px;
     min-height: 230px;
     width: 20vw;
@@ -97,13 +97,13 @@ const ButtonsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   @media screen and (min-width: 800px) {
-    top: calc(20vh + 20vw + 70px);
+    top: calc(20vh + 18vw + 100px);
     margin-left: 0;
     transform: translate(0);
     min-width: 230px;
     width: 20vw;
     max-width: 300px;
-    right: 60vw;
+    right: 55vw;
   }
 `;
 
