@@ -1,6 +1,7 @@
 import { Title } from "../styles/Common";
 import {
   Wrapper,
+  TitleProjects,
   ImagesWrapper,
   ImageLink,
   Image
@@ -15,7 +16,7 @@ import words from "../assets/words.png";
 const Projects = () => {
   return (
     <Wrapper>
-      <Title>Projects</Title>
+      <TitleProjects>Projects</TitleProjects>
       <ImagesWrapper>
         <ImageLink
           href="https://vikhulei.github.io/safety/index.html"
