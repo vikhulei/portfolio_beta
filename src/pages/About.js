@@ -2,8 +2,11 @@ import { Title } from "../styles/Common";
 
 import {
   Wrapper,
+  TitleAbout,
   TextWrapper,
   PreText,
+  CurrentStack,
+  NowLearning,
   Heading,
   Bullet
 } from "../styles/AboutStyles";
@@ -11,12 +14,13 @@ import {
 const About = () => {
   return (
     <Wrapper>
-      <Title>About me</Title>
+      <TitleAbout>About me</TitleAbout>
       <TextWrapper>
         <PreText>
           My coding jorney started in July 2020 with the completion of HTM/CSS/JS
           course.
         </PreText>
+        <CurrentStack>
         <Heading>Current stack:</Heading>
         <Bullet>HTML/CSS/JS</Bullet>
         <Bullet>React</Bullet>
@@ -26,10 +30,13 @@ const About = () => {
         <Bullet>Figma</Bullet>
         <Bullet>VS Code/CodeSandbox</Bullet>
         <Bullet>Git, GitHub</Bullet>
+        </CurrentStack>
+        <NowLearning>
         <Heading>Now learning:</Heading>
         <Bullet>Redux</Bullet>
         <Bullet>Express for Node.js</Bullet>
         <Bullet>MongoDB</Bullet>
+        </NowLearning>
       </TextWrapper>
     </Wrapper>
   );

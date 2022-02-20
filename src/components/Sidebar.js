@@ -2,11 +2,10 @@ import styled from "styled-components";
 import Hamburger from "hamburger-react";
 
 const NavWrapper = styled.div`
-
   position: fixed;
   top: 0;
   left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
-  transition: 300ms;
+  transition: 0ms;
   height: 100vh;
   width: 100%;
   background-color: grey;
@@ -21,7 +20,7 @@ const NavWrapper = styled.div`
     transition: 0ms;
     width: fit-content;
     height: 500px;
-    top: 40%;
+    top: 45%;
     transform: translateY(-50%);
     background-color: rgba(30, 30, 30, 0);
   }
