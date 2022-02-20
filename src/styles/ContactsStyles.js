@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Title} from "../styles/Common"
 
 const Wrapper = styled.div`
   position: relative;
@@ -8,19 +9,38 @@ const Wrapper = styled.div`
   background-color: rgb(57, 71, 81);
 `;
 
+const TitleContacts = styled(Title) `
+@media screen and (min-width: 800px) {
+  position: absolute;
+  width: 60vw;
+  left: 25vw;
+  text-align: left;
+}
+`
+
 const ContentWrapper = styled.div`
   position: relative;
   margin: 0 auto;
   top: 5vh;
   width: 70vw;
   height: 60vh;
+  @media screen and (min-width: 800px) {
+    position: absolute;
+    width: 60vw;
+    top: 30vh;
+    left: 25vw;
+  }
 `;
 
 const Image = styled.img`
   position: absolute;
+  height: 100%;
   width: 100%;
   max-height: 100%;
   object-fit: cover;
+  // @media screen and (min-width: 800px) {
+  //   object-fit: fill;
+  // }
 `;
 
 const ContactsWrapper = styled.div`
@@ -47,17 +67,17 @@ const EmailAddressWrapper = styled.div`
 
 const PhoneNumber = styled.a`
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: max(1.3rem, 2vw);
   color: white;
 `;
 
 const EmailAddress = styled.a`
-  font-size: 1.3rem;
+  font-size: max(1.3rem, 2vw);
   color: white;
 `;
 
 const Icon = styled.a`
-  font-size: 2.5rem;
+  font-size: max(3.5vw, 2.5rem);
 `;
 
 const IconsWrapper = styled.div`
@@ -73,6 +93,7 @@ const IconsWrapper = styled.div`
 
 export {
   Wrapper,
+  TitleContacts,
   ContentWrapper,
   Image,
   Icon,

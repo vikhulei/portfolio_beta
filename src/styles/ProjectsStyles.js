@@ -10,8 +10,6 @@ const Wrapper = styled.div`
 `;
 
 const TitleProjects = styled(Title) `
-  // margin-left: 50%;
-  // transform: translate(-50%);
   @media screen and (min-width: 800px) {
     position: absolute;
     width: 60vw;

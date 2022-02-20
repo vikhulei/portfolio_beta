@@ -1,7 +1,8 @@
-import { Title } from "../styles/Common";
+import {useState, useEffect} from "react";
 import {
   Wrapper,
   ContentWrapper,
+  TitleContacts,
   Image,
   Icon,
   IconsWrapper,
@@ -12,17 +13,38 @@ import {
   ContactsWrapper
 } from "../styles/ContactsStyles";
 import contacts from "../assets/contacts.png";
+import contactsDesk from "../assets/contacts_desk.png";
 import * as Fa from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlinePhone } from "react-icons/ai";
+import { WindowSharp } from "@mui/icons-material";
 
 const Contacts = () => {
+const [desktopSize, setDesktopSize] = useState(false);
+
+const switchSize = () => {
+  if(window.innerWidth > 800) {
+    setDesktopSize(true)
+  } else {
+      setDesktopSize(false)
+    }
+  }
+
+  useEffect(() => {
+    switchSize();
+    window.addEventListener("resize", switchSize);
+    return () => window.removeEventListener("resize", switchSize)
+  }, [])
+
+
   return (
     <Wrapper>
-      <Title>Contacts</Title>
+      <TitleContacts>Contacts</TitleContacts>
 
       <ContentWrapper>
-        <Image src={contacts} alt="contacts" />
+        {desktopSize ?
+        <Image src={contactsDesk} alt="contacts" /> :
+        <Image src={contacts} alt="contacts" /> }
         <ContactsWrapper>
           <AiOutlinePhone fontSize="2.2rem" color="#31BE11" />
           <PhoneNumber href="tel:+380637931590">+380637931590</PhoneNumber>
@@ -34,23 +56,23 @@ const Contacts = () => {
         </ContactsWrapper>
         <IconsWrapper>
           <Icon href="sms:+380637931590">
-            <Fa.FaSms fontSize="2.5rem" color="darkgrey" />
+            <Fa.FaSms  color="darkgrey" />
           </Icon>
           <Icon href="http://m.me/victor.guley" target="_blank">
             {" "}
             <Fa.FaFacebookMessenger color="#0037FD" />{" "}
           </Icon>
           <Icon href="https://wa.me/+380637931590" target="_blank">
-            <Fa.FaWhatsapp fontSize="2.5rem" color="#31BE11" />{" "}
+            <Fa.FaWhatsapp color="#31BE11" />{" "}
           </Icon>
           <Icon href="https://telegram.me/vikhulei" target="_blank">
-            <Fa.FaTelegram fontSize="2.5rem" color="#4BB6F2" />
+            <Fa.FaTelegram color="#4BB6F2" />
           </Icon>
           <Icon href="https://github.com/vikhulei" target="_blank">
-            <Fa.FaGithub fontSize="2.5rem" color="white" />
+            <Fa.FaGithub color="white" />
           </Icon>
           <Icon href="https://www.linkedin.com/in/vikhulei" target="_blank">
-            <Fa.FaLinkedin fontSize="2.5rem" color="#3C65F3" />
+            <Fa.FaLinkedin  color="#3C65F3" />
           </Icon>
         </IconsWrapper>
       </ContentWrapper>
