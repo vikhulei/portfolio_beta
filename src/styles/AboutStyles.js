@@ -29,7 +29,8 @@ const TextWrapper = styled.div`
     width: 60vw;
     height: 55vh;
     margin: 0 7vw 0 auto;
-
+    padding: 30px;
+    line-height: 1.2;
   }
 `;
 
