@@ -28,13 +28,14 @@ const LogoWrapper = styled.div`
 `;
 
 const TitleHome = styled(Title)` margin-bottom: 10px;
-  font-size: min(14vw, 400%);
+  font-size: max(6vw, 320%);
 `;
 
 const Subtitle = styled.p`
 font-size: min(12vw, 220%);
   font-style: italic;
   color: white;
+  font-size: max(3vw, 170%);
 `;
 
 const ReactImg = styled.img`
@@ -46,7 +47,7 @@ const ReactImg = styled.img`
   height: 150%;
   @media screen and (min-width: 800px) {
     height: 30vw;
-    min-height: 400px;
+    min-height: 300px;
     top: 0;
     transform: translate(-47%);
   }

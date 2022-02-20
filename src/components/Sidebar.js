@@ -17,13 +17,13 @@ const NavWrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   @media screen and (min-width: 800px) {
-    left: 0;
+    left: 5vw;
     transition: 0ms;
-    width: 170px;
+    width: fit-content;
     height: 500px;
     top: 40%;
     transform: translateY(-50%);
-    background-color: rgba(30, 30, 30, 0)
+    background-color: rgba(30, 30, 30, 0);
   }
 `;
 
@@ -44,6 +44,8 @@ const NavLink = styled.a`
   }
   @media screen and (min-width: 800px) {
     border-bottom: none;
+    justify-content: left;
+    font-size: 2rem;
   }
 `;
 
