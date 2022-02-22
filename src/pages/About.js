@@ -33,9 +33,10 @@ const About = () => {
         </CurrentStack>
         <NowLearning>
         <Heading>Now learning:</Heading>
-        <Bullet>Redux</Bullet>
+        <Bullet>SASS</Bullet>
         <Bullet>Express for Node.js</Bullet>
         <Bullet>MongoDB</Bullet>
+        <Bullet>Redux</Bullet>
         </NowLearning>
       </TextWrapper>
     </Wrapper>
