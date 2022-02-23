@@ -17,7 +17,6 @@ const TitleContacts = styled(Title) `
   text-align: left;
 }
 `
-
 const ContentWrapper = styled.div`
   position: relative;
   margin: 0 auto;
@@ -38,9 +37,6 @@ const Image = styled.img`
   width: 100%;
   max-height: 100%;
   object-fit: cover;
-  // @media screen and (min-width: 800px) {
-  //   object-fit: fill;
-  // }
 `;
 
 const ContactsWrapper = styled.div`
@@ -89,6 +85,11 @@ const IconsWrapper = styled.div`
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-items: center;
+  @media screen and (max-height: 400px) {
+    padding-top: 0;
+    height: 60%;
+    margin-top: 5%;
+  }
 `;
 
 export {
