@@ -28,6 +28,10 @@ const ImagesWrapper = styled.div`
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2.2vw;
   row-gap: 2.2vw;
+  @media screen and (max-height: 400px) {
+    grid-template-columns: repeat(3, 1fr);
+    width: 60vw;
+  }
   @media screen and (min-width: 800px) {
     position: absolute;
     grid-template-columns: repeat(3, 1fr);
