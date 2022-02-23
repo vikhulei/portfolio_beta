@@ -32,31 +32,35 @@ const TextWrapper = styled.div`
     padding: 30px;
     line-height: 1.2;
   }
+  @media screen and (max-height: 400px) {
+    height: 55vh;
+  }
 `;
 
 const PreText = styled.div`
   font-size: 2.4vh;
   text-align: center;
   line-height: 1.5;
-  @media screen and (min-width: 800px) {
+  @media screen and (min-width: 800px), (max-height: 400px) {
     font-size: min(3vh, 3vw);
     margin-bottom: 2vh;
   }
 `;
 
 const CurrentStack = styled.div `
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800px), (max-height: 400px) {
   position: absolute;
   left: 4vw;
   width: fit-content;
 }
 `
 const NowLearning = styled.div `
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800px), (max-height: 400px) {
   position: absolute;
   right: 4vw;
   width: fit-content;
 }
+
 `
 
 const Heading = styled.h2`

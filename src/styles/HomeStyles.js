@@ -22,11 +22,9 @@ const LogoWrapper = styled.div`
     height: 60%;
   }
   @media screen and (max-height: 400px) {
-    
     width: fit-content;
     top: 25vh;
     right: 10%;
-    
    }
 `;
 
@@ -115,6 +113,9 @@ const ButtonsWrapper = styled.div`
     max-width: 300px;
     right: 50vw;
   }
+  @media screen and (max-height: 400px) {
+    bottom: 15vh;
+   }
 `;
 
 const HomeButton = styled(Button)`
