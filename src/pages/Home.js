@@ -36,7 +36,7 @@ const Home = () => {
           <ButtonsWrapper>
             <HomeButton
               variant="contained"
-              style={{ backgroundColor: "#770000", color: "white" }}
+              style={{ backgroundColor: "#8c0d2d", color: "white" }}
               endIcon={<FileIcon />}
               onClick={() =>
                 window.open("https://www.linkedin.com/in/vikhulei")
@@ -46,7 +46,7 @@ const Home = () => {
             </HomeButton>
             <HomeButton
               variant="contained"
-              style={{ backgroundColor: "#001c77", color: "white" }}
+              style={{ backgroundColor: "#0d5b8c", color: "white" }}
               endIcon={<SendIcon />}
               onClick={() => window.open("mailto:vikhulei@gmail.com")}
             >

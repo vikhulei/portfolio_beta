@@ -102,6 +102,7 @@ const ButtonsWrapper = styled.div`
   margin-left: 50%;
   transform: translate(-50%);
   width: 70vw;
+  max-width: 300px;
   display: flex;
   justify-content: space-between;
   @media screen and (min-width: 800px) {
@@ -121,6 +122,7 @@ const ButtonsWrapper = styled.div`
 const HomeButton = styled(Button)`
   width: 90px;
   height: 30px;
+  background-color: green;
   @media screen and (min-width: 800px) {
     height: 40px;
     width: 110px;
