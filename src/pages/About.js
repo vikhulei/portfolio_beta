@@ -30,6 +30,7 @@ const About = () => {
         <Bullet>Figma</Bullet>
         <Bullet>VS Code/CodeSandbox</Bullet>
         <Bullet>Git, GitHub</Bullet>
+        <Bullet>Jira</Bullet>
         </CurrentStack>
         <NowLearning>
         <Heading>Now learning:</Heading>

@@ -3,9 +3,6 @@ import { Button } from "@material-ui/core";
 import { Title } from "../styles/Common";
 
 const Wrapper = styled.div`
-  /* @media screen and (min-width: 600px) {
-    display: flex;
-  } */
   position: relative;
   height: 100vh;
   width: 100%;
@@ -18,13 +15,19 @@ const LogoWrapper = styled.div`
   top: 13vh;
   text-align: center;
   width: 100%;
-  // background-color: lightcoral;
   @media screen and (min-width: 800px) {
     padding-top: 20px;
     width: fit-content;
     left: 60vw;
     height: 60%;
   }
+  @media screen and (max-height: 400px) {
+    
+    width: fit-content;
+    top: 25vh;
+    right: 10%;
+    
+   }
 `;
 
 const TitleHome = styled(Title)` margin-bottom: 10px;
@@ -72,6 +75,12 @@ const PhotoWrapper = styled.div`
     max-width: 300px;
     max-height: 300px;
   }
+  @media screen and (max-height: 400px) {
+    margin-left: 10%;
+    transform: translate(0);
+    width: 19vw;
+    height: 19vw;
+   }
 `;
 
 const Square = styled.div`
