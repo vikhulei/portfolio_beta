@@ -11,9 +11,9 @@ const Wrapper = styled.div`
 
 const TitleProjects = styled(Title) `
   @media screen and (min-width: 800px) {
-    position: absolute;
+    position: relative;
     width: 60vw;
-    left: 25vw;
+    margin-left: 32vw;
   }
 `
 
@@ -33,12 +33,11 @@ const ImagesWrapper = styled.div`
     width: 60vw;
   }
   @media screen and (min-width: 800px) {
-    position: absolute;
+    position: relative;
     grid-template-columns: repeat(3, 1fr);
     width: 60vw;
     max-width: 60vw;
-    top: 30vh;
-    left: 25vw;
+    margin: 0 7vw 0 auto;
   }
 `;
 
@@ -53,4 +52,24 @@ const Image = styled.img`
   object-fit: cover;
 `;
 
-export { Wrapper, TitleProjects, ImagesWrapper, ImageLink, Image };
+const Card = styled.div `
+  position: relative;
+  &:hover {
+    transform: scale(1.1);
+  }
+  height: 100%;
+`;
+
+const Front = styled.div `
+  position: absolute;
+  backface-visibility: hidden;
+`
+const Back = styled.div `
+  position: absolute;
+  background-color: rgba(35,25,126,0.6);
+  height: 100%;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+`
+
+export { Wrapper, TitleProjects, ImagesWrapper, ImageLink, Image, Card, Front, Back };

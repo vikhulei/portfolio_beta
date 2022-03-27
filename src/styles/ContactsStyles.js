@@ -11,9 +11,9 @@ const Wrapper = styled.div`
 
 const TitleContacts = styled(Title) `
 @media screen and (min-width: 800px) {
-  position: absolute;
+  position: relative;
   width: 60vw;
-  left: 25vw;
+  margin-left: 32vw;
   text-align: left;
 }
 `
@@ -24,10 +24,11 @@ const ContentWrapper = styled.div`
   width: 70vw;
   height: 60vh;
   @media screen and (min-width: 800px) {
-    position: absolute;
+    position: relative;
     width: 60vw;
-    top: 30vh;
-    left: 25vw;
+    margin: 0 7vw 0 auto;
+    top: 5%;
+    // left: 25vw;
   }
 `;
 

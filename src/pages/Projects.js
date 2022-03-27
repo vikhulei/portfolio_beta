@@ -4,7 +4,10 @@ import {
   TitleProjects,
   ImagesWrapper,
   ImageLink,
-  Image
+  Image,
+  Card,
+  Front,
+  Back
 } from "../styles/ProjectsStyles";
 import construct from "../assets/construct.png";
 import safety from "../assets/safety.png";
@@ -18,12 +21,19 @@ const Projects = () => {
     <Wrapper>
       <TitleProjects>Projects</TitleProjects>
       <ImagesWrapper>
+        <Card>
+          <Front>
         <ImageLink
           href="https://vikhulei.github.io/safety/index.html"
           target="_blank"
         >
           <Image src={safety} alt="safety" />
         </ImageLink>
+        </Front>
+        <Back>
+         <h2>This is some text to be shown at the back of the card</h2> 
+        </Back>
+        </Card>
         <ImageLink
           href="http://bethanynivki.surge.sh/pages/home"
           target="_blank"
