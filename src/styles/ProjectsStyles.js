@@ -54,11 +54,14 @@ const Image = styled.img`
 
 const Card = styled.div `
   position: relative;
-  &:hover {
-    transform: scale(1.1);
-  }
+  transform-style: preserve-3d;
+  transition: 500ms;
+    transform: ${({flip}) => (flip ? "perspective(2000px) rotateY(180deg)" : "rotateY(0deg)") };
   height: 100%;
 `;
+
+const Safety = styled(Card) ``;
+const Church = styled(Safety) ``;
 
 const Front = styled.div `
   position: absolute;
@@ -72,4 +75,4 @@ const Back = styled.div `
   backface-visibility: hidden;
 `
 
-export { Wrapper, TitleProjects, ImagesWrapper, ImageLink, Image, Card, Front, Back };
+export { Wrapper, TitleProjects, ImagesWrapper, ImageLink, Image, Safety, Church, Front, Back };

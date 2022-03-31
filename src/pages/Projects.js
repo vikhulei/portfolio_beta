@@ -1,11 +1,12 @@
-import { Title } from "../styles/Common";
+import { useState } from "react";
 import {
   Wrapper,
   TitleProjects,
   ImagesWrapper,
   ImageLink,
   Image,
-  Card,
+  Safety,
+  Church,
   Front,
   Back
 } from "../styles/ProjectsStyles";
@@ -17,29 +18,55 @@ import quiz from "../assets/quiz.png";
 import words from "../assets/words.png";
 
 const Projects = () => {
+  const [flip, setFlip] = useState(new Set)
+
+  const flipCard = (id) => {
+    if (flip.has(id)) {
+      flip.delete(id)
+    } else {
+      flip.add(id)
+    }
+    // console.log(flip)
+    // setFlip(flip)
+  }
+
   return (
     <Wrapper>
       <TitleProjects>Projects</TitleProjects>
       <ImagesWrapper>
-        <Card>
+        <Safety onClick={flipCard(1)}
+              flip={flip.has(1)}
+        >
           <Front>
-        <ImageLink
+        {/* <ImageLink
+          href="#"
           href="https://vikhulei.github.io/safety/index.html"
           target="_blank"
-        >
+        > */}
           <Image src={safety} alt="safety" />
-        </ImageLink>
+        {/* </ImageLink> */}
         </Front>
         <Back>
-         <h2>This is some text to be shown at the back of the card</h2> 
+         <h2>This is some text to be shown at the back of the SAFETY</h2> 
         </Back>
-        </Card>
-        <ImageLink
+        </Safety>
+
+        <Church onClick={flipCard(2)}
+              flip={flip.has(2)}
+        >
+          <Front>
+        {/* <ImageLink
           href="http://bethanynivki.surge.sh/pages/home"
           target="_blank"
-        >
+        > */}
           <Image src={church} alt="church" />
-        </ImageLink>
+        {/* </ImageLink> */}
+        </Front>
+        <Back>
+         <h2>This is some text to be shown at the back of the CHURCH</h2> 
+        </Back>
+        </Church>
+
         <ImageLink href="#">
           <Image src={words} alt="words" />
         </ImageLink>
