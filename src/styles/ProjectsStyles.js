@@ -75,4 +75,4 @@ const Back = styled.div `
   backface-visibility: hidden;
 `
 
-export { Wrapper, TitleProjects, ImagesWrapper, ImageLink, Image, Safety, Church, Front, Back };
+export { Wrapper, TitleProjects, ImagesWrapper, ImageLink, Image, Card, Safety, Church, Front, Back };

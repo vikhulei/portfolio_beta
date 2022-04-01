@@ -1,10 +1,12 @@
 import { useState } from "react";
+import ReactCardFlip from "react-card-flip";
 import {
   Wrapper,
   TitleProjects,
   ImagesWrapper,
   ImageLink,
   Image,
+  Card,
   Safety,
   Church,
   Front,
@@ -18,26 +20,43 @@ import quiz from "../assets/quiz.png";
 import words from "../assets/words.png";
 
 const Projects = () => {
-  const [flip, setFlip] = useState(new Set)
+  const [flip, setFlip] = useState(false)
 
-  const flipCard = (id) => {
-    if (flip.has(id)) {
-      flip.delete(id)
-    } else {
-      flip.add(id)
-    }
-    // console.log(flip)
+  // const tst = (idd) => {
+  //   let flip = new Set()
+  //   flip.add(45);
+  //   setFlip(flip);
+  //   console.log(flip)
+  // }
+
+
+  const flipCard = () => {
+    return (e) => {
+    e.preventDefault();
+    setFlip(!flip)
+    // let flip = new Set(flip)
+    // if (flip.has(id)) {
+    //   flip.delete(id)
+    // } else {
+    //   flip.add(id)
+    // }
     // setFlip(flip)
+    // console.log(flip)
   }
+}
 
   return (
     <Wrapper>
       <TitleProjects>Projects</TitleProjects>
       <ImagesWrapper>
-        <Safety onClick={flipCard(1)}
-              flip={flip.has(1)}
-        >
-          <Front>
+        <ReactCardFlip
+          flip={flip}
+          flipDirection="vertical"
+          >
+          <Front
+            onClick={flipCard}
+            >
+            
         {/* <ImageLink
           href="#"
           href="https://vikhulei.github.io/safety/index.html"
@@ -46,15 +65,17 @@ const Projects = () => {
           <Image src={safety} alt="safety" />
         {/* </ImageLink> */}
         </Front>
-        <Back>
+        <Back
+        onClick={flipCard(1)}
+        >
          <h2>This is some text to be shown at the back of the SAFETY</h2> 
         </Back>
-        </Safety>
+        </ReactCardFlip>
 
-        <Church onClick={flipCard(2)}
-              flip={flip.has(2)}
+        <ReactCardFlip
         >
-          <Front>
+          <Front
+          >
         {/* <ImageLink
           href="http://bethanynivki.surge.sh/pages/home"
           target="_blank"
@@ -62,10 +83,11 @@ const Projects = () => {
           <Image src={church} alt="church" />
         {/* </ImageLink> */}
         </Front>
-        <Back>
+        <Back
+        >
          <h2>This is some text to be shown at the back of the CHURCH</h2> 
         </Back>
-        </Church>
+        </ReactCardFlip>
 
         <ImageLink href="#">
           <Image src={words} alt="words" />
