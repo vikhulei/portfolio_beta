@@ -24,7 +24,7 @@ const ImagesWrapper = styled.div`
   top: 8%;
   width: 80vw;
   max-width: 500px;
-  height: 30vw;
+  height: 100%;
   max-height: 50vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -38,6 +38,7 @@ const ImagesWrapper = styled.div`
     position: relative;
     grid-template-columns: repeat(3, 1fr);
     width: 60vw;
+    height: 30vw;
     max-width: 60vw;
     margin: 0 7vw 0 auto;
   }
@@ -50,7 +51,7 @@ const ImageLink = styled.a`
 
 const Image = styled.img`
   width: 100%;
-  height: 100%;
+  // height: 100%;
   object-fit: cover;
 `;
 
@@ -66,7 +67,7 @@ const Front = styled.div `
   position: absolute;
   backface-visibility: hidden;
   width: 100%;
-  height: 100%;
+  // height: 100%;
 `
 const Back = styled.div `
   position: absolute;
@@ -89,6 +90,10 @@ const BackText = styled.p `
   @media screen and (max-width: 1300px) {
     font-size: 1.7vmin;
     line-height: 1.1;
+  }
+  @media screen and (max-width: 800px) {
+    font-size: 2.3vmin;
+    line-height: 1.3;
   }
 `
 
