@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import {Title} from "../styles/Common"
+import {Title} from "../styles/Common";
+
 
 const Wrapper = styled.div`
   position: relative;
@@ -23,7 +24,8 @@ const ImagesWrapper = styled.div`
   top: 8%;
   width: 80vw;
   max-width: 500px;
-  height: 50vh;
+  height: 30vw;
+  max-height: 50vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2.2vw;
@@ -42,13 +44,13 @@ const ImagesWrapper = styled.div`
 `;
 
 const ImageLink = styled.a`
-  &:hover {
-    transform: scale(1.1);
-  }
+  text-decoration: none;
+  color: white;
 `;
 
 const Image = styled.img`
   width: 100%;
+  height: 100%;
   object-fit: cover;
 `;
 
@@ -56,23 +58,55 @@ const Card = styled.div `
   position: relative;
   transform-style: preserve-3d;
   transition: 500ms;
-    transform: ${({flip}) => (flip ? "perspective(2000px) rotateY(180deg)" : "rotateY(0deg)") };
-  height: 100%;
+  transform: ${({flip}) => (flip ? "perspective(2000px) rotateY(180deg) scale(1.2)" : "rotateY(0deg)") };
+  z-index: ${({flip}) => (flip ? "99" : "") };
 `;
-
-const Safety = styled(Card) ``;
-const Church = styled(Safety) ``;
 
 const Front = styled.div `
   position: absolute;
   backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
 `
 const Back = styled.div `
   position: absolute;
-  background-color: rgba(35,25,126,0.6);
+  padding: 0 7px 7px;
   height: 100%;
+  width: 100%;
   transform: rotateY(180deg);
   backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: 
+  #617bb0;
+`
+const BackText = styled.p `
+  font-size: 2vh;
+  line-height: 1.5;
+  @media screen and (max-width: 1300px) {
+    font-size: 1.7vmin;
+    line-height: 1.1;
+  }
 `
 
-export { Wrapper, TitleProjects, ImagesWrapper, ImageLink, Image, Card, Safety, Church, Front, Back };
+const ButtonsWrapper = styled.div `
+width: 100%;
+min-height: 30%;
+`
+
+const Button = styled.button `
+width: 80%;
+height: 45%;
+margin-bottom: 4%;
+background-color: #757575;
+color: white;
+font-size: 1.5vh;
+@media screen and (max-width: 1200px) {
+  font-size: 10px;
+}
+`
+
+export { Wrapper, TitleProjects, ImagesWrapper, ImageLink, Image, Card, Front, Back, BackText, ButtonsWrapper, Button };

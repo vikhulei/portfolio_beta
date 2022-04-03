@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ReactCardFlip from "react-card-flip";
 import {
   Wrapper,
   TitleProjects,
@@ -7,10 +6,11 @@ import {
   ImageLink,
   Image,
   Card,
-  Safety,
-  Church,
   Front,
-  Back
+  Back,
+  BackText,
+  ButtonsWrapper,
+  Button
 } from "../styles/ProjectsStyles";
 import construct from "../assets/construct.png";
 import safety from "../assets/safety.png";
@@ -20,28 +20,18 @@ import quiz from "../assets/quiz.png";
 import words from "../assets/words.png";
 
 const Projects = () => {
-  const [flip, setFlip] = useState(false)
+  const [flip, setFlip] = useState(new Set())
 
-  // const tst = (idd) => {
-  //   let flip = new Set()
-  //   flip.add(45);
-  //   setFlip(flip);
-  //   console.log(flip)
-  // }
-
-
-  const flipCard = () => {
+  const flipCard = (id) => {
     return (e) => {
     e.preventDefault();
-    setFlip(!flip)
-    // let flip = new Set(flip)
-    // if (flip.has(id)) {
-    //   flip.delete(id)
-    // } else {
-    //   flip.add(id)
-    // }
-    // setFlip(flip)
-    // console.log(flip)
+    let flipp = new Set(flip)
+    if (flipp.has(id)) {
+      flipp.delete(id)
+    } else {
+      flipp.add(id)
+    }
+    setFlip(flipp)
   }
 }
 
@@ -49,58 +39,94 @@ const Projects = () => {
     <Wrapper>
       <TitleProjects>Projects</TitleProjects>
       <ImagesWrapper>
-        <ReactCardFlip
-          flip={flip}
-          flipDirection="vertical"
+        <Card
+          flip={flip.has(1)}
+          onClick={flipCard(1)}
           >
-          <Front
-            onClick={flipCard}
-            >
-            
-        {/* <ImageLink
-          href="#"
-          href="https://vikhulei.github.io/safety/index.html"
-          target="_blank"
-        > */}
-          <Image src={safety} alt="safety" />
-        {/* </ImageLink> */}
-        </Front>
-        <Back
-        onClick={flipCard(1)}
-        >
-         <h2>This is some text to be shown at the back of the SAFETY</h2> 
+          <Front><Image src={safety} alt="safety" /></Front>
+        <Back>
+         <BackText>This is one of my first projects, made with pure HTML/CSS/JS. Created for my work in Peace Corps. </BackText> 
+         <ButtonsWrapper>
+         <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
+         <Button onClick={() => window.open("https://github.com/vikhulei/safety")}>View Code</Button>
+         </ButtonsWrapper>
         </Back>
-        </ReactCardFlip>
+        </Card>
 
-        <ReactCardFlip
+        <Card
+        flip={flip.has(2)}
+        onClick={flipCard(2)}
         >
-          <Front
-          >
-        {/* <ImageLink
-          href="http://bethanynivki.surge.sh/pages/home"
-          target="_blank"
-        > */}
+          <Front>
           <Image src={church} alt="church" />
-        {/* </ImageLink> */}
         </Front>
-        <Back
-        >
-         <h2>This is some text to be shown at the back of the CHURCH</h2> 
+        <Back>
+         <BackText>This small website was created with React and React Router for an existing church in Kyiv. </BackText> 
+         <ButtonsWrapper>
+         <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
+         <Button onClick={() => window.open("https://github.com/vikhulei/safety")}>View Code</Button>
+         </ButtonsWrapper>
         </Back>
-        </ReactCardFlip>
-
-        <ImageLink href="#">
+        </Card>
+        <Card
+        flip={flip.has(3)}
+        onClick={flipCard(3)}
+        >
+        <Front>
           <Image src={words} alt="words" />
-        </ImageLink>
-        <ImageLink href="#">
+        </Front>
+        <Back>
+         <BackText>I did this game as part of React course on Udemy, with some adjustments. </BackText> 
+         <ButtonsWrapper>
+         <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
+         <Button onClick={() => window.open("https://github.com/vikhulei/safety")}>View Code</Button>
+         </ButtonsWrapper>
+        </Back>
+        </Card>
+        <Card
+        flip={flip.has(4)}
+        onClick={flipCard(4)}
+        >
+        <Front>
           <Image src={construct} alt="construct" />
-        </ImageLink>
-        <ImageLink href="#">
+        </Front>
+        <Back>
+         <BackText>The portal helps with construction costs calculations. JS is used. </BackText> 
+         <ButtonsWrapper>
+         <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
+         <Button onClick={() => window.open("https://github.com/vikhulei/safety")}>View Code</Button>
+         </ButtonsWrapper>
+        </Back>
+        </Card>
+        <Card
+        flip={flip.has(5)}
+        onClick={flipCard(5)}
+        >
+        <Front>
           <Image src={hrm} alt="hrm" />
-        </ImageLink>
-        <ImageLink href="#">
+        </Front>
+        <Back>
+         <BackText>You are viewing it now. Styled Components, React Icons and MUI have been used.  </BackText> 
+         <ButtonsWrapper>
+         <Button onClick={() => window.open("https://github.com/vikhulei/safety")}>View Code</Button>
+         </ButtonsWrapper>
+        </Back>
+        </Card>
+        <Card
+        flip={flip.has(6)}
+        onClick={flipCard(6)}
+        >
+        <Front>
           <Image src={quiz} alt="quiz" />
-        </ImageLink>
+        </Front>
+        <Back>
+         <BackText>Questions are shuffled randomly. Press R to repeat a question. </BackText> 
+         <ButtonsWrapper>
+         <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
+         <Button onClick={() => window.open("https://github.com/vikhulei/safety")}>View Code</Button>
+         </ButtonsWrapper>
+        </Back>
+        </Card>
       </ImagesWrapper>
     </Wrapper>
   );
