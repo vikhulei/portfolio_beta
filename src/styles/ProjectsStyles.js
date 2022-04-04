@@ -59,21 +59,27 @@ const Card = styled.div `
   position: relative;
   transform-style: preserve-3d;
   transition: 500ms;
-  transform: ${({flip}) => (flip ? "perspective(2000px) rotateY(180deg) scale(1.2)" : "rotateY(0deg)") };
+  transform: ${({flip}) => (flip ? "perspective(2000px) rotateY(180deg)" : "rotateY(0deg)") };
   z-index: ${({flip}) => (flip ? "99" : "") };
-`;
+  // width: ${({flip}) => (flip ? "400px" : "") };
+  // // height: ${({flip}) => (flip ? "30vw" : "") };
+  // // position: ${({flip}) => (flip ? "absolute" : "relative")}
+  // margin-left: ${({flip}) => (flip ? "0" : "" )}
+  `;
 
 const Front = styled.div `
   position: absolute;
   backface-visibility: hidden;
   width: 100%;
-  // height: 100%;
+  min-width: 100%;
 `
 const Back = styled.div `
   position: absolute;
   padding: 0 7px 7px;
-  height: 100%;
-  width: 100%;
+  width: 210%;
+  height: 150%;
+  right: ${({odd}) => (odd ? "0" : "")};
+  bottom: 0;
   transform: rotateY(180deg);
   backface-visibility: hidden;
   display: flex;
@@ -92,7 +98,7 @@ const BackText = styled.p `
     line-height: 1.1;
   }
   @media screen and (max-width: 800px) {
-    font-size: 2.3vmin;
+    font-size: 4vw;
     line-height: 1.3;
   }
 `

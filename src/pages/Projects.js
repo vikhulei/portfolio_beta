@@ -20,7 +20,9 @@ import quiz from "../assets/quiz.png";
 import words from "../assets/words.png";
 
 const Projects = () => {
-  const [flip, setFlip] = useState(new Set())
+  const [flip, setFlip] = useState(new Set());
+
+  const [odd, setOdd] = useState(false);
 
   const flipCard = (id) => {
     return (e) => {
@@ -32,6 +34,11 @@ const Projects = () => {
       flipp.add(id)
     }
     setFlip(flipp)
+    if((id===3) || (id===1) || (id===5)) {
+      setOdd(true)
+    } else {
+      setOdd(false)
+    }
   }
 }
 
@@ -44,7 +51,9 @@ const Projects = () => {
           onClick={flipCard(1)}
           >
           <Front><Image src={safety} alt="safety" /></Front>
-        <Back>
+        <Back
+        odd="true"
+        >
          <BackText>This is one of my first projects, made with pure HTML/CSS/JS. Created for my work in Peace Corps. </BackText> 
          <ButtonsWrapper>
          <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
@@ -57,10 +66,12 @@ const Projects = () => {
         flip={flip.has(2)}
         onClick={flipCard(2)}
         >
-          <Front>
+          <Front
+        >
           <Image src={church} alt="church" />
         </Front>
-        <Back>
+        <Back
+        >
          <BackText>This small website was created with React and React Router for an existing church in Kyiv. </BackText> 
          <ButtonsWrapper>
          <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
@@ -75,7 +86,9 @@ const Projects = () => {
         <Front>
           <Image src={words} alt="words" />
         </Front>
-        <Back>
+        <Back
+          odd="true"
+        >
          <BackText>I did this game as part of React course on Udemy, with some adjustments. </BackText> 
          <ButtonsWrapper>
          <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
@@ -105,7 +118,9 @@ const Projects = () => {
         <Front>
           <Image src={hrm} alt="hrm" />
         </Front>
-        <Back>
+        <Back
+          odd="true"        
+        >
          <BackText>You are viewing it now. Styled Components, React Icons and MUI have been used.  </BackText> 
          <ButtonsWrapper>
          <Button onClick={() => window.open("https://github.com/vikhulei/safety")}>View Code</Button>
