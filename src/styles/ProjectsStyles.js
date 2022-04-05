@@ -51,35 +51,36 @@ const ImageLink = styled.a`
 
 const Image = styled.img`
   width: 100%;
-  // height: 100%;
+  height: 100%;
   object-fit: cover;
 `;
 
 const Card = styled.div `
   position: relative;
+  height: 100%;
   transform-style: preserve-3d;
   transition: 500ms;
-  transform: ${({flip}) => (flip ? "perspective(2000px) rotateY(180deg)" : "rotateY(0deg)") };
+  transform: ${({flip}) => (flip ? "perspective(2000px) rotateY(180deg) scale(1.2)" : "rotateY(0deg)") };
   z-index: ${({flip}) => (flip ? "99" : "") };
-  // width: ${({flip}) => (flip ? "400px" : "") };
-  // // height: ${({flip}) => (flip ? "30vw" : "") };
-  // // position: ${({flip}) => (flip ? "absolute" : "relative")}
-  // margin-left: ${({flip}) => (flip ? "0" : "" )}
+  @media screen and (max-width: 800px) {
+    transform: ${({flip}) => (flip ? "perspective(2000px) rotateY(180deg)" : "rotateY(0deg)") };
+  }
   `;
 
 const Front = styled.div `
   position: absolute;
   backface-visibility: hidden;
   width: 100%;
-  min-width: 100%;
+  height: 100%;
+  @media screen and (max-width: 800px) {
+    height: 80%;
+  }
 `
 const Back = styled.div `
   position: absolute;
   padding: 0 7px 7px;
-  width: 210%;
-  height: 150%;
-  right: ${({odd}) => (odd ? "0" : "")};
-  bottom: 0;
+  width: 100%;
+  height: 100%;
   transform: rotateY(180deg);
   backface-visibility: hidden;
   display: flex;
@@ -88,7 +89,13 @@ const Back = styled.div `
   align-items: center;
   text-align: center;
   background-color: 
-  #617bb0;
+  #617bb0;  
+  @media screen and (max-width: 800px) {
+    bottom: 0;
+    height: 150%;
+  width: ${({flip}) => (flip ? "82vw" : "100%")};
+  transform: ${({odd}) => (odd ? "rotateY(180deg) translateX(51%)" : "rotateY(180deg) translateX(1%)")};
+  }
 `
 const BackText = styled.p `
   font-size: 2vh;
@@ -98,7 +105,7 @@ const BackText = styled.p `
     line-height: 1.1;
   }
   @media screen and (max-width: 800px) {
-    font-size: 4vw;
+    font-size: 4.7vw;
     line-height: 1.3;
   }
 `

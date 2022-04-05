@@ -34,9 +34,10 @@ const Projects = () => {
       flipp.add(id)
     }
     setFlip(flipp)
-    if((id===3) || (id===1) || (id===5)) {
+    if ((id===1) || (id===3) || (id===5)) {
       setOdd(true)
-    } else {
+    }
+    else {
       setOdd(false)
     }
   }
@@ -52,7 +53,8 @@ const Projects = () => {
           >
           <Front><Image src={safety} alt="safety" /></Front>
         <Back
-        odd="true"
+        odd={odd}
+        flip={flip.has(1)}
         >
          <BackText>This is one of my first projects, made with pure HTML/CSS/JS. Created for my work in Peace Corps. </BackText> 
          <ButtonsWrapper>
@@ -71,6 +73,8 @@ const Projects = () => {
           <Image src={church} alt="church" />
         </Front>
         <Back
+          flip={flip.has(2)}
+          odd={odd}
         >
          <BackText>This small website was created with React and React Router for an existing church in Kyiv. </BackText> 
          <ButtonsWrapper>
@@ -87,7 +91,8 @@ const Projects = () => {
           <Image src={words} alt="words" />
         </Front>
         <Back
-          odd="true"
+        odd={odd}
+        flip={flip.has(3)}
         >
          <BackText>I did this game as part of React course on Udemy, with some adjustments. </BackText> 
          <ButtonsWrapper>
@@ -103,7 +108,10 @@ const Projects = () => {
         <Front>
           <Image src={construct} alt="construct" />
         </Front>
-        <Back>
+        <Back
+          odd={odd}
+          flip={flip.has(4)}
+        >
          <BackText>The portal helps with construction costs calculations. JS is used. </BackText> 
          <ButtonsWrapper>
          <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
@@ -119,7 +127,8 @@ const Projects = () => {
           <Image src={hrm} alt="hrm" />
         </Front>
         <Back
-          odd="true"        
+        odd={odd}
+        flip={flip.has(5)}
         >
          <BackText>You are viewing it now. Styled Components, React Icons and MUI have been used.  </BackText> 
          <ButtonsWrapper>
@@ -134,7 +143,10 @@ const Projects = () => {
         <Front>
           <Image src={quiz} alt="quiz" />
         </Front>
-        <Back>
+        <Back
+          odd={odd}
+          flip={flip.has(6)}
+        >
          <BackText>Questions are shuffled randomly. Press R to repeat a question. </BackText> 
          <ButtonsWrapper>
          <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
