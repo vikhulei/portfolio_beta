@@ -91,6 +91,7 @@ const Back = styled.div `
   background-color: 
   #617bb0;  
   @media screen and (max-width: 800px) {
+    transition: 500ms;
     bottom: 0;
     height: 150%;
   width: ${({flip}) => (flip ? "82vw" : "100%")};

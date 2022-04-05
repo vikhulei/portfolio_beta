@@ -3,7 +3,6 @@ import {
   Wrapper,
   TitleProjects,
   ImagesWrapper,
-  ImageLink,
   Image,
   Card,
   Front,
