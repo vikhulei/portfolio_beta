@@ -89,21 +89,22 @@ const Back = styled.div `
   align-items: center;
   text-align: center;
   background-color: 
-  #617bb0;  
+  #617bb0;
   @media screen and (max-width: 800px) {
-    transition: 500ms;
     bottom: 0;
     height: 150%;
-  width: ${({flip}) => (flip ? "82vw" : "100%")};
-  transform: ${({odd}) => (odd ? "rotateY(180deg) translateX(51%)" : "rotateY(180deg) translateX(1%)")};
+    width: 82vw;
+    right: 0;
+    transition: 500ms;
+    transform: ${({flip, odd}) => (flip ? odd ? "rotateY(180deg) translateX(-1%)" : "rotateY(180deg) translateX(-51%)" : "")};
   }
 `
 const BackText = styled.p `
   font-size: 2vh;
   line-height: 1.5;
   @media screen and (max-width: 1300px) {
-    font-size: 1.7vmin;
-    line-height: 1.1;
+    font-size: 1.9vmin;
+    line-height: 1.4;
   }
   @media screen and (max-width: 800px) {
     font-size: 4.7vw;
@@ -124,7 +125,7 @@ background-color: #757575;
 color: white;
 font-size: 1.5vh;
 @media screen and (max-width: 1200px) {
-  font-size: 10px;
+  font-size: 12px;
 }
 `
 

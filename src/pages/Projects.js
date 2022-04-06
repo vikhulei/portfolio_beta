@@ -55,7 +55,7 @@ const Projects = () => {
         odd={odd}
         flip={flip.has(1)}
         >
-         <BackText>This is one of my first projects, made with pure HTML/CSS/JS. Created for my work in Peace Corps. </BackText> 
+         <BackText>This is one of my first projects, made with pure HTML/CSS/JS. Created for my work in Peace Corps.</BackText> 
          <ButtonsWrapper>
          <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
          <Button onClick={() => window.open("https://github.com/vikhulei/safety")}>View Code</Button>
