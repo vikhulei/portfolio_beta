@@ -22,7 +22,7 @@ const Home = () => {
     <>
       <Wrapper>
           <LogoWrapper>
-            <TitleHome>Viktor Hulei</TitleHome>
+            <TitleHome>Victor Hulei</TitleHome>
             <Subtitle>Front-End Developer</Subtitle>
             <ReactImg src={react} alt="react_image" />
           </LogoWrapper>
