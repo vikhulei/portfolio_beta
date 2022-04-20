@@ -97,6 +97,7 @@ const Back = styled.div `
     right: 0;
     transition: 500ms;
     transform: ${({flip, odd}) => (flip ? odd ? "rotateY(180deg) translateX(-1%)" : "rotateY(180deg) translateX(-51%)" : "")};
+
   }
 `
 const BackText = styled.p `

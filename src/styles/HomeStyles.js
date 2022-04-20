@@ -56,11 +56,13 @@ const ReactImg = styled.img`
 
 const PhotoWrapper = styled.div`
   position: absolute;
-  bottom: 40vh;
+  bottom: 35vh;
   margin-left: 50%;
   transform: translate(-50%);
-  width: 150px;
-  height: 150px;
+  width: 40vw;
+  height: 40vw;
+  max-width: 150px;
+  max-height: 150px;
   @media screen and (min-width: 800px) {
     top: 20vh;
     margin-left: 0;

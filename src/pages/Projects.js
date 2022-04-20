@@ -77,8 +77,8 @@ const Projects = () => {
         >
          <BackText>This small website was created with React and React Router for an existing church in Kyiv. </BackText> 
          <ButtonsWrapper>
-         <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
-         <Button onClick={() => window.open("https://github.com/vikhulei/safety")}>View Code</Button>
+         <Button onClick={() => window.open("https://bethanynivki.surge.sh/")}> Open</Button>
+         <Button onClick={() => window.open("https://github.com/vikhulei/bethany_church")}>View Code</Button>
          </ButtonsWrapper>
         </Back>
         </Card>
