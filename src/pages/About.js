@@ -26,15 +26,13 @@ const About = () => {
         <Bullet>React</Bullet>
         <Bullet>React Router</Bullet>
         <Bullet>Styled Components</Bullet>
-        <Bullet>Material UI</Bullet>
         <Bullet>Figma</Bullet>
         <Bullet>VS Code/CodeSandbox</Bullet>
         <Bullet>Git, GitHub</Bullet>
-        <Bullet>Jira</Bullet>
+        <Bullet>SASS</Bullet>
         </CurrentStack>
         <NowLearning>
         <Heading>Now learning:</Heading>
-        <Bullet>SASS</Bullet>
         <Bullet>Express for Node.js</Bullet>
         <Bullet>MongoDB</Bullet>
         <Bullet>Redux</Bullet>
