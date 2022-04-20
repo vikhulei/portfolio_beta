@@ -14,7 +14,7 @@ import {
 import construct from "../assets/construct.png";
 import safety from "../assets/safety.png";
 import church from "../assets/church.png";
-import hrm from "../assets/hrm.png";
+import portfolio from "../assets/portfolio.jpg";
 import quiz from "../assets/quiz.png";
 import words from "../assets/words.png";
 
@@ -95,11 +95,30 @@ const Projects = () => {
         >
          <BackText>I did this game as part of React course on Udemy, with some adjustments. </BackText> 
          <ButtonsWrapper>
-         <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
-         <Button onClick={() => window.open("https://github.com/vikhulei/safety")}>View Code</Button>
+         <Button onClick={() => window.open("https://vicswordgame.surge.sh/")}> Open</Button>
+         <Button onClick={() => window.open("https://github.com/vikhulei/9projects-1wordgame")}>View Code</Button>
          </ButtonsWrapper>
         </Back>
         </Card>
+
+        <Card
+        flip={flip.has(5)}
+        onClick={flipCard(5)}
+        >
+        <Front>
+          <Image src={portfolio} alt="portfolio" />
+        </Front>
+        <Back
+        odd={odd}
+        flip={flip.has(5)}
+        >
+         <BackText>You are viewing it now. Styled Components, React Icons and MUI have been used.  </BackText> 
+         <ButtonsWrapper>
+         <Button onClick={() => window.open("https://github.com/vikhulei/portfolio")}>View Code</Button>
+         </ButtonsWrapper>
+        </Back>
+        </Card>
+
         <Card
         flip={flip.has(4)}
         onClick={flipCard(4)}
@@ -111,30 +130,12 @@ const Projects = () => {
           odd={odd}
           flip={flip.has(4)}
         >
-         <BackText>The portal helps with construction costs calculations. JS is used. </BackText> 
-         <ButtonsWrapper>
-         <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
-         <Button onClick={() => window.open("https://github.com/vikhulei/safety")}>View Code</Button>
-         </ButtonsWrapper>
+         <BackText>The portal helps with construction costs calculations. JS is used. <br/>
+         SITE UNDER CONSTRUCTION
+          </BackText> 
         </Back>
         </Card>
-        <Card
-        flip={flip.has(5)}
-        onClick={flipCard(5)}
-        >
-        <Front>
-          <Image src={hrm} alt="hrm" />
-        </Front>
-        <Back
-        odd={odd}
-        flip={flip.has(5)}
-        >
-         <BackText>You are viewing it now. Styled Components, React Icons and MUI have been used.  </BackText> 
-         <ButtonsWrapper>
-         <Button onClick={() => window.open("https://github.com/vikhulei/safety")}>View Code</Button>
-         </ButtonsWrapper>
-        </Back>
-        </Card>
+
         <Card
         flip={flip.has(6)}
         onClick={flipCard(6)}
@@ -148,8 +149,8 @@ const Projects = () => {
         >
          <BackText>Questions are shuffled randomly. Press R to repeat a question. </BackText> 
          <ButtonsWrapper>
-         <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
-         <Button onClick={() => window.open("https://github.com/vikhulei/safety")}>View Code</Button>
+         <Button onClick={() => window.open("https://vicsquiz.surge.sh")}> Open</Button>
+         <Button onClick={() => window.open("https://github.com/vikhulei/quiz")}>View Code</Button>
          </ButtonsWrapper>
         </Back>
         </Card>
