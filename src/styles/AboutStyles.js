@@ -3,7 +3,7 @@ import {Title} from "../styles/Common";
 
 const Wrapper = styled.div`
   position: relative;
-  padding-top: 50px;
+  padding-top: 30px;
   height: 100vh;
   width: 100%;
   background-color: rgb(67, 71, 81);
@@ -27,7 +27,7 @@ const TextWrapper = styled.div`
   padding: 8px;
   @media screen and (min-width: 800px) {
     width: 60vw;
-    height: 55vh;
+    height: 60vh;
     margin: 0 7vw 0 auto;
     padding: 30px;
     line-height: 1.2;

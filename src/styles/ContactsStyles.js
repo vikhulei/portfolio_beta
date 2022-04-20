@@ -69,7 +69,7 @@ const PhoneNumber = styled.a`
 `;
 
 const EmailAddress = styled.a`
-  font-size: max(1.3rem, 2vw);
+  font-size: max(1.1rem, 2vw);
   color: white;
 `;
 
