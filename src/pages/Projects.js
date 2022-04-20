@@ -102,15 +102,15 @@ const Projects = () => {
         </Card>
 
         <Card
-        flip={flip.has(5)}
-        onClick={flipCard(5)}
+        flip={flip.has(4)}
+        onClick={flipCard(4)}
         >
         <Front>
           <Image src={portfolio} alt="portfolio" />
         </Front>
         <Back
         odd={odd}
-        flip={flip.has(5)}
+        flip={flip.has(4)}
         >
          <BackText>You are viewing it now. Styled Components, React Icons and MUI have been used.  </BackText> 
          <ButtonsWrapper>
@@ -120,15 +120,15 @@ const Projects = () => {
         </Card>
 
         <Card
-        flip={flip.has(4)}
-        onClick={flipCard(4)}
+        flip={flip.has(5)}
+        onClick={flipCard(5)}
         >
         <Front>
           <Image src={construct} alt="construct" />
         </Front>
         <Back
           odd={odd}
-          flip={flip.has(4)}
+          flip={flip.has(5)}
         >
          <BackText>The portal helps with construction costs calculations. JS is used. <br/>
          SITE UNDER CONSTRUCTION
