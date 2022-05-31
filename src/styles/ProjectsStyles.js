@@ -62,8 +62,10 @@ const Card = styled.div `
   transition: 500ms;
   transform: ${({flip}) => (flip ? "perspective(2000px) rotateY(180deg) scale(1.2)" : "rotateY(0deg)") };
   z-index: ${({flip}) => (flip ? "99" : "") };
+  -webkit-transform: ${({flip}) => (flip ? "translate3d(0,0,0)" : "") };
   @media screen and (max-width: 800px) {
-    transform: ${({flip}) => (flip ? "perspective(2000px) rotateY(180deg)" : "rotateY(0deg)") };
+    // transform: ${({flip}) => (flip ? "perspective(2000px) rotateY(180deg)" : "rotateY(0deg)") };
+    transform: ${({flip, odd}) => (flip ? odd ? "perspective(2000px) rotateY(180deg) translateX(2%)" : "perspective(2000px) rotateY(180deg) translateX(110%)" : "")};
   }
   `;
 
@@ -96,7 +98,7 @@ const Back = styled.div `
     width: 82vw;
     right: 0;
     transition: 500ms;
-    transform: ${({flip, odd}) => (flip ? odd ? "rotateY(180deg) translateX(-1%)" : "rotateY(180deg) translateX(-51%)" : "")};
+    // transform: ${({flip, odd}) => (flip ? odd ? "translateX(-1%)" : "translateX(-51%)" : "")};
 
   }
 `

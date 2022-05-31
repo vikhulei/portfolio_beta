@@ -20,9 +20,7 @@ import words from "../assets/words.png";
 
 const Projects = () => {
   const [flip, setFlip] = useState(new Set());
-
   const [odd, setOdd] = useState(false);
-
   const flipCard = (id) => {
     return (e) => {
     e.preventDefault();
@@ -48,6 +46,7 @@ const Projects = () => {
       <ImagesWrapper>
         <Card
           flip={flip.has(1)}
+          odd={odd}
           onClick={flipCard(1)}
           >
           <Front><Image src={safety} alt="safety" /></Front>
@@ -55,7 +54,7 @@ const Projects = () => {
         odd={odd}
         flip={flip.has(1)}
         >
-         <BackText>This is one of my first projects, made with pure HTML/CSS/JS. Created for my work in Peace Corps.</BackText> 
+         <BackText>This is one of my first projects, made with pure HTML/CSS/JS. Created for my work in Peace Corps.</BackText>
          <ButtonsWrapper>
          <Button onClick={() => window.open("https://vikhulei.github.io/safety/index.html")}> Open</Button>
          <Button onClick={() => window.open("https://github.com/vikhulei/safety")}>View Code</Button>
@@ -65,6 +64,7 @@ const Projects = () => {
 
         <Card
         flip={flip.has(2)}
+        odd={odd}
         onClick={flipCard(2)}
         >
           <Front
@@ -84,6 +84,7 @@ const Projects = () => {
         </Card>
         <Card
         flip={flip.has(3)}
+        odd={odd}
         onClick={flipCard(3)}
         >
         <Front>
@@ -103,6 +104,7 @@ const Projects = () => {
 
         <Card
         flip={flip.has(4)}
+        odd={odd}
         onClick={flipCard(4)}
         >
         <Front>
@@ -121,6 +123,7 @@ const Projects = () => {
 
         <Card
         flip={flip.has(5)}
+        odd={odd}
         onClick={flipCard(5)}
         >
         <Front>
@@ -138,6 +141,7 @@ const Projects = () => {
 
         <Card
         flip={flip.has(6)}
+        odd={odd}
         onClick={flipCard(6)}
         >
         <Front>
