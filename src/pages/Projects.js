@@ -11,16 +11,17 @@ import {
   ButtonsWrapper,
   Button
 } from "../styles/ProjectsStyles";
-import construct from "../assets/construct.png";
-import safety from "../assets/safety.png";
-import church from "../assets/church.png";
+import construct from "../assets/construct.jpg";
+import safety from "../assets/safety.jpg";
+import church from "../assets/church.jpg";
 import portfolio from "../assets/portfolio.jpg";
-import quiz from "../assets/quiz.png";
-import words from "../assets/words.png";
+import quiz from "../assets/quiz.jpg";
+import words from "../assets/words.jpg";
 
 const Projects = () => {
   const [flip, setFlip] = useState(new Set());
   const [odd, setOdd] = useState(false);
+  
   const flipCard = (id) => {
     return (e) => {
     e.preventDefault();
@@ -49,7 +50,11 @@ const Projects = () => {
           odd={odd}
           onClick={flipCard(1)}
           >
-          <Front><Image src={safety} alt="safety" /></Front>
+          <Front
+            flip={flip.has(1)}
+          >
+            <Image src={safety} loading="lazy" alt="safety" />
+          </Front>
         <Back
         odd={odd}
         flip={flip.has(1)}
@@ -68,12 +73,13 @@ const Projects = () => {
         onClick={flipCard(2)}
         >
           <Front
+          flip={flip.has(2)}
         >
-          <Image src={church} alt="church" />
+          <Image src={church} loading="lazy" alt="church" />
         </Front>
         <Back
-          flip={flip.has(2)}
           odd={odd}
+          flip={flip.has(2)}
         >
          <BackText>This small website was created with React and React Router for an existing church in Kyiv. </BackText> 
          <ButtonsWrapper>
@@ -82,13 +88,17 @@ const Projects = () => {
          </ButtonsWrapper>
         </Back>
         </Card>
+
+
         <Card
         flip={flip.has(3)}
         odd={odd}
         onClick={flipCard(3)}
         >
-        <Front>
-          <Image src={words} alt="words" />
+        <Front
+          flip={flip.has(3)}
+        >
+          <Image src={words} loading="lazy" alt="words" />
         </Front>
         <Back
         odd={odd}
@@ -107,8 +117,10 @@ const Projects = () => {
         odd={odd}
         onClick={flipCard(4)}
         >
-        <Front>
-          <Image src={portfolio} alt="portfolio" />
+        <Front
+          flip={flip.has(4)}
+          >
+          <Image src={portfolio} loading="lazy" alt="portfolio" />
         </Front>
         <Back
         odd={odd}
@@ -126,8 +138,10 @@ const Projects = () => {
         odd={odd}
         onClick={flipCard(5)}
         >
-        <Front>
-          <Image src={construct} alt="construct" />
+        <Front
+          flip={flip.has(5)}
+        >
+          <Image src={construct} loading="lazy" alt="construct" />
         </Front>
         <Back
           odd={odd}
@@ -144,8 +158,10 @@ const Projects = () => {
         odd={odd}
         onClick={flipCard(6)}
         >
-        <Front>
-          <Image src={quiz} alt="quiz" />
+        <Front
+          flip={flip.has(6)}
+        >
+          <Image src={quiz} loading="lazy" alt="quiz" />
         </Front>
         <Back
           odd={odd}

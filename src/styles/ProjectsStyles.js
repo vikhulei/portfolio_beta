@@ -35,19 +35,13 @@ const ImagesWrapper = styled.div`
     width: 60vw;
   }
   @media screen and (min-width: 800px) {
-    position: relative;
     grid-template-columns: repeat(3, 1fr);
     width: 60vw;
     height: 30vw;
     max-width: 60vw;
     margin: 0 7vw 0 auto;
   }
-`;
-
-const ImageLink = styled.a`
-  text-decoration: none;
-  color: white;
-`;
+`
 
 const Image = styled.img`
   width: 100%;
@@ -58,23 +52,15 @@ const Image = styled.img`
 const Card = styled.div `
   position: relative;
   height: 100%;
-  transform-style: preserve-3d;
-  transition: 500ms;
-  transform: ${({flip}) => (flip ? "perspective(2000px) rotateY(180deg) scale(1.2)" : "rotateY(0deg)") };
-  z-index: ${({flip}) => (flip ? "99" : "") };
-  -webkit-transform: ${({flip}) => (flip ? "translate3d(0,0,0)" : "") };
-  @media screen and (max-width: 800px) {
-    // transform: ${({flip}) => (flip ? "perspective(2000px) rotateY(180deg)" : "rotateY(0deg)") };
-    transform: ${({flip, odd}) => (flip ? odd ? "perspective(2000px) rotateY(180deg) translateX(2%)" : "perspective(2000px) rotateY(180deg) translateX(110%)" : "")};
-  }
-  `;
+  `
 
 const Front = styled.div `
   position: absolute;
-  backface-visibility: hidden;
   width: 100%;
   height: 100%;
   @media screen and (max-width: 800px) {
+    transition: 800ms;
+    opacity: ${({flip}) => (flip ? "0" : "1")};
     height: 80%;
   }
 `
@@ -83,23 +69,25 @@ const Back = styled.div `
   padding: 0 7px 7px;
   width: 100%;
   height: 100%;
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background-color: 
-  #617bb0;
+  background-color: #617bb0;
+  z-index: 999;
+  // transition: transform 500ms;
+  transition: opacity 400ms;
+  opacity: ${({flip}) => (flip ? "1" : "0")};
+  transform: ${({flip}) => (flip ? "scale(1.2)" : "scale(0)")};
   @media screen and (max-width: 800px) {
-    bottom: 0;
-    height: 150%;
+    transition: 200ms;
+    transform: translate(-50%, -50%);
     width: 82vw;
+    height: 150%;
+    transform: ${({flip, odd}) => (flip ? odd ? "translate(51%, 20%) scale(1)" : "translate(1%, 20%) scale(1)" : "scale(0)")};
+    bottom: 0;
     right: 0;
-    transition: 500ms;
-    // transform: ${({flip, odd}) => (flip ? odd ? "translateX(-1%)" : "translateX(-51%)" : "")};
-
   }
 `
 const BackText = styled.p `
@@ -132,4 +120,4 @@ font-size: 1.5vh;
 }
 `
 
-export { Wrapper, TitleProjects, ImagesWrapper, ImageLink, Image, Card, Front, Back, BackText, ButtonsWrapper, Button };
+export { Wrapper, TitleProjects, ImagesWrapper, Image, Card, Front, Back, BackText, ButtonsWrapper, Button };

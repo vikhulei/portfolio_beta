@@ -43,8 +43,8 @@ const switchSize = () => {
 
       <ContentWrapper>
         {desktopSize ?
-        <Image src={contactsDesk} alt="contacts" /> :
-        <Image src={contacts} alt="contacts" /> }
+        <Image src={contactsDesk} loading="lazy" alt="contacts" /> :
+        <Image src={contacts} loading="lazy" alt="contacts" /> }
         <ContactsWrapper>
           <AiOutlinePhone fontSize="2.2rem" color="#31BE11" />
           <PhoneNumber href="tel:+447706`204681">+447706 204681</PhoneNumber>

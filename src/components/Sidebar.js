@@ -9,7 +9,7 @@ const NavWrapper = styled.div`
   height: 100vh;
   width: 100%;
   background-color: grey;
-  z-index: 89;
+  z-index: 99;
   height: 100%;
   display: flex;
   flex-direction: column;
