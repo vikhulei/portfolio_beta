@@ -22,8 +22,7 @@ const About = () => {
         <CurrentStack>
         <Heading>Current stack:</Heading>
         <Bullet>HTML/CSS/JS</Bullet>
-        <Bullet>React</Bullet>
-        <Bullet>React Router</Bullet>
+        <Bullet>React, React Router</Bullet>
         <Bullet>Styled Components</Bullet>
         <Bullet>Figma</Bullet>
         <Bullet>VS Code/CodeSandbox</Bullet>
@@ -32,9 +31,9 @@ const About = () => {
         </CurrentStack>
         <NowLearning>
         <Heading>Now learning:</Heading>
-        <Bullet>Express for Node.js</Bullet>
+        <Bullet>Python</Bullet>
         <Bullet>MongoDB</Bullet>
-        <Bullet>Redux</Bullet>
+        <Bullet>mySQL</Bullet>
         </NowLearning>
       </TextWrapper>
     </Wrapper>

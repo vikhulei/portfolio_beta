@@ -19,7 +19,7 @@ margin: 0 7vw 0 auto;
 padding: 30px;
 line-height: 1.2;
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 830px) {
   height: 65vh;
   width: 80vw;
   top: 5%;
@@ -34,7 +34,6 @@ line-height: 1.2;
 `;
 
 const PreText = styled.div`
-  position: absolute;
   font-size: 2.4vh;
   text-align: center;
   line-height: 1.5;
@@ -50,7 +49,6 @@ const PreText = styled.div`
 const CurrentStack = styled.div `
 @media screen and (min-width: 800px), (max-height: 400px) {
   position: absolute;
-  top: 6vh;
   left: 4vw;
   width: fit-content;
 }
@@ -58,7 +56,6 @@ const CurrentStack = styled.div `
 const NowLearning = styled.div `
 @media screen and (min-width: 800px), (max-height: 400px) {
   position: absolute;
-  top: 6vh;
   right: 4vw;
   width: fit-content;
 }
