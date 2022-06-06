@@ -8,10 +8,8 @@ import SideBar from "./components/Sidebar";
 
 export default function App() {
   const [isOpen, setOpen] = useState(false);
-  const [flip, setFlip] = useState(false);
 
   const toggleHam = () => setOpen(!isOpen);
-  const toggleFlip = () => setFlip(!flip);
 
   return (
     <div>

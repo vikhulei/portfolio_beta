@@ -43,7 +43,6 @@ font-size: 2rem;
   align-items: center;
 }
 `
-
 const HamWrapper = styled.div`
 display: none;
 @media screen and (max-width: 800px) {
