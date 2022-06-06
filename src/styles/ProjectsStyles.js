@@ -76,10 +76,10 @@ const Back = styled.div `
   text-align: center;
   background-color: #617bb0;
   z-index: 999;
-  // transition: transform 500ms;
   transition: opacity 400ms;
   opacity: ${({flip}) => (flip ? "1" : "0")};
   transform: ${({flip}) => (flip ? "scale(1.2)" : "scale(0)")};
+
   @media screen and (max-width: 800px) {
     transition: 200ms;
     transform: translate(-50%, -50%);
@@ -88,6 +88,13 @@ const Back = styled.div `
     transform: ${({flip, odd}) => (flip ? odd ? "translate(51%, 20%) scale(1)" : "translate(1%, 20%) scale(1)" : "scale(0)")};
     bottom: 0;
     right: 0;
+  }
+
+  @media screen and (max-height: 400px) {
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    transform: ${({flip, odd}) => (flip ? odd ? "scale(1.7)" : "scale(1.7)" : "scale(1.7)")};
   }
 `
 const BackText = styled.p `
@@ -101,11 +108,18 @@ const BackText = styled.p `
     font-size: 4.7vw;
     line-height: 1.3;
   }
+  @media screen and (max-height: 400px) {
+    font-size: 8px;
+  }
 `
 
 const ButtonsWrapper = styled.div `
 width: 100%;
 min-height: 30%;
+@media screen and (max-height: 400px) {
+  min-height: 30px;
+}
+
 `
 
 const Button = styled.button `
@@ -117,6 +131,11 @@ color: white;
 font-size: 1.5vh;
 @media screen and (max-width: 1200px) {
   font-size: 12px;
+}
+@media screen and (max-height: 400px) {
+  font-size: 6px;
+  height: 40%;
+  margin-bottom: 1%;
 }
 `
 
