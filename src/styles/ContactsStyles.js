@@ -7,6 +7,9 @@ const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
   background-color: rgb(57, 71, 81);
+  @media screen and (max-height: 400px) {
+    padding-top: 10px;
+  }
 `;
 
 const TitleContacts = styled(Title) `
@@ -28,7 +31,6 @@ const ContentWrapper = styled.div`
     width: 60vw;
     margin: 0 7vw 0 auto;
     top: 5%;
-    // left: 25vw;
   }
 `;
 
@@ -49,17 +51,6 @@ const ContactsWrapper = styled.div`
   grid-template-columns: 1fr 5fr;
   grid-column-gap: 10px;
   align-items: center;
-`;
-
-const ContactWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-const EmailAddressWrapper = styled.div`
-  display: flex;
 `;
 
 const PhoneNumber = styled.a`
@@ -101,8 +92,6 @@ export {
   Icon,
   IconsWrapper,
   ContactsWrapper,
-  ContactWrapper,
-  EmailAddressWrapper,
   PhoneNumber,
   EmailAddress
 };

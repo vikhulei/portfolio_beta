@@ -6,8 +6,6 @@ import {
   Image,
   Icon,
   IconsWrapper,
-  ContactWrapper,
-  EmailAddressWrapper,
   PhoneNumber,
   EmailAddress,
   ContactsWrapper
