@@ -22,11 +22,12 @@ const LogoWrapper = styled.div`
     height: 35%;
     width: 100%;
   }
-  // @media screen and (max-height: 400px) {
-  //   width: fit-content;
-  //   top: 25vh;
-  //   right: 10%;
-  //  }
+  @media screen and (max-height: 400px) {
+    width: fit-content;
+    height: 60%;
+    top: 20vh;
+    right: 10%;
+   }
 `;
 
 const TitleWrapper = styled.div`
@@ -79,6 +80,14 @@ justify-content: space-between;
   min-height: 40vh;
 }
 
+@media screen and (max-height: 400px) {
+  margin-top: 8%;
+  left: 10%;
+  width: 25%;
+  min-width: 20%;
+  height: 70%;
+}
+
 `
 
 const PhotoWrapper = styled.div`
@@ -93,12 +102,9 @@ background-color: grey;
   max-width: 150px;
   max-height: 150px;
   }
-  // @media screen and (max-height: 400px) {
-  //   margin-left: 10%;
-  //   transform: translate(0);
-  //   width: 19vw;
-  //   height: 19vw;
-  //  }
+  @media screen and (max-height: 400px) {
+    width: 19vw;
+   }
 `;
 
 const Photo = styled.img`
@@ -119,18 +125,22 @@ const ButtonsWrapper = styled.div`
   }
 
   @media screen and (max-height: 400px) {
-    bottom: 15vh;
+    width: 100%;
    }
 `;
 
 const HomeButton = styled(Button)`
-height: 4vh;
 width: 40%;
+height: 4vh;
 
 @media screen and (max-width: 800px) {
   width: 90px;
   height: 30px;
 }
+
+@media screen and (max-height: 400px) {
+  width: 45%;
+  height: 8vh;
 `;
 
 export {

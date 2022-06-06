@@ -2,7 +2,6 @@ import { Title } from "../styles/Common";
 
 import {
   Wrapper,
-  TitleAbout,
   TextWrapper,
   PreText,
   CurrentStack,
@@ -14,7 +13,7 @@ import {
 const About = () => {
   return (
     <Wrapper>
-      <TitleAbout>About me</TitleAbout>
+      <Title>About me</Title>
       <TextWrapper>
         <PreText>
           My coding jorney started in July 2020 with the completion of HTM/CSS/JS
