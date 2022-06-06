@@ -34,6 +34,7 @@ line-height: 1.2;
 `;
 
 const PreText = styled.div`
+  position: absolute;
   font-size: 2.4vh;
   text-align: center;
   line-height: 1.5;
@@ -49,6 +50,7 @@ const PreText = styled.div`
 const CurrentStack = styled.div `
 @media screen and (min-width: 800px), (max-height: 400px) {
   position: absolute;
+  top: 6vh;
   left: 4vw;
   width: fit-content;
 }
@@ -56,6 +58,7 @@ const CurrentStack = styled.div `
 const NowLearning = styled.div `
 @media screen and (min-width: 800px), (max-height: 400px) {
   position: absolute;
+  top: 6vh;
   right: 4vw;
   width: fit-content;
 }
