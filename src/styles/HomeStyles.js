@@ -11,13 +11,12 @@ const Wrapper = styled.div`
 
 const LogoWrapper = styled.div`
   position: absolute;
-  top: 8vh;
-  right: 5vw;
+  top: 8%;
+  right: 5%;
   height: 65%;
   width: 35%;
 
   @media screen and (max-width: 800px) {
-    top: 10%;
     right: 0;
     height: 35%;
     width: 100%;
@@ -25,7 +24,7 @@ const LogoWrapper = styled.div`
   @media screen and (max-height: 400px) {
     width: fit-content;
     height: 60%;
-    top: 20vh;
+    top: 20%;
     right: 10%;
    }
 `;
@@ -76,8 +75,8 @@ justify-content: space-between;
   left: 0;
   width: 100%;
   max-width: 100%;
-  height: 40vh;
-  min-height: 40vh;
+  height: 37%;
+  min-height: 37%;
 }
 
 @media screen and (max-height: 400px) {
