@@ -20,20 +20,20 @@ const About = () => {
           course.
         </PreText>
         <CurrentStack>
-        <Heading>Current stack:</Heading>
-        <Bullet>HTML/CSS/JS</Bullet>
-        <Bullet>React, React Router</Bullet>
-        <Bullet>Styled Components</Bullet>
-        <Bullet>Figma</Bullet>
-        <Bullet>VS Code/CodeSandbox</Bullet>
-        <Bullet>Git, GitHub</Bullet>
-        <Bullet>SASS</Bullet>
+          <Heading>Current stack:</Heading>
+          <Bullet>HTML/CSS/JS</Bullet>
+          <Bullet>React, React Router</Bullet>
+          <Bullet>Styled Components</Bullet>
+          <Bullet>Figma</Bullet>
+          <Bullet>VS Code/CodeSandbox</Bullet>
+          <Bullet>Git, GitHub</Bullet>
+          <Bullet>SASS</Bullet>
         </CurrentStack>
         <NowLearning>
-        <Heading>Now learning:</Heading>
-        <Bullet>Python</Bullet>
-        <Bullet>MongoDB</Bullet>
-        <Bullet>mySQL</Bullet>
+          <Heading>Now learning:</Heading>
+          <Bullet>Python</Bullet>
+          <Bullet>MongoDB</Bullet>
+          <Bullet>mySQL</Bullet>
         </NowLearning>
       </TextWrapper>
     </Wrapper>
